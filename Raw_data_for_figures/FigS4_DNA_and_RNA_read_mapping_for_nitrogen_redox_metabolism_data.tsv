@@ -1,0 +1,1297 @@
+"Sample_name"	"DNA_vs_RNA"	"Time_point"	"Metabolic_treatment"	"Replicate_number"	"kegg_ID"	"TPM"	"kegg_ID_custom_order"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	623.520516871999	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	665.932919667117	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	677.050233013664	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	26.1225928681674	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	186.144285721609	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	34.6237971637395	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	517.537186094883	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	514.018272536153	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	573.723266919387	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	273.10678343426	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	349.910972137073	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	419.780530539229	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	309.216907957326	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	280.358407889953	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	97.1070197082051	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	105.447067169029	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	76.2753943117891	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	445.534696536592	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	462.208772456412	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	549.010246955459	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	251.229816878629	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	260.330902961847	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	407.312270092025	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	461.007160713567	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	509.611569888607	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	354.257983735884	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	874.971758844444	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	1215.58217275842	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	1003.17057910397	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	26.8444060063592	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	317.113051436424	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	470.504836661966	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	14.4831705176441	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	9.42818029002193	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	35.8806678642306	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	17.9493455690737	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	2.82784893765873	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	21.0951535075247	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	22.1811568416962	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	8.24568457168762	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	4.24618439482652	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	11.1870944950861	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	29.1650273616986	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	25.7507148163858	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	301.191618026963	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	11.2760458162352	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	13.8455551319721	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K10944; methane/ammonia monooxygenase subunit A
+[EC:1.14.18.3 1.14.99.39]"	21.3800139042394	"K10944; methane/ammonia monooxygenase subunit A"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	570.86187306814	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	592.794615360428	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	613.129503242945	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	16.9524373179631	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	163.424909177927	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	33.1291179100987	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	470.629000124283	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	463.64955588396	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	513.837249429743	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	249.614637831451	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	307.511543674301	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	396.88598885751	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	282.15252858579	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	247.166604872656	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	84.0840873926499	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	92.1859050247026	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	69.258503100082	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	412.848728187897	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	428.363036381559	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	507.022159714038	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	234.50899530584	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	233.432200783992	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	376.56511721756	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	420.246830243812	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	464.89647033766	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	334.058998962758	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	991.383062903493	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	1139.52484897716	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	1080.85978193914	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	31.325235336105	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	315.930315368128	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	482.886471826318	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	36.4198101906251	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	46.3127222238398	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	234.83467748758	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	138.881447190926	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	35.0337620729	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	62.7054188976807	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	240.863684193955	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	10.2282458216235	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	15.0584415753984	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	14.937967904561	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	119.217364234495	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	161.054941045906	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	284.086876277776	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K10945; methane/ammonia monooxygenase subunit B"	32.9815857056272	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K10945; methane/ammonia monooxygenase subunit B"	77.3109250250359	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K10945; methane/ammonia monooxygenase subunit B"	113.18764189452	"K10945; methane/ammonia monooxygenase subunit B"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	2161.17948188666	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	2238.92767750482	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	2344.86623320815	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	95.5705710001411	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	617.970056722479	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	117.190361248229	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	1758.72580488375	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	1733.67496874364	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	2018.95656789356	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	965.453520898895	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	1208.68536103431	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	1488.65500823952	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	1084.98983381171	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	952.320844103735	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	339.978924991625	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	365.998498315061	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	278.738704624977	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	1674.0930817998	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	1659.17383583896	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	1973.19090105717	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	890.419530051451	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	879.92571017381	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	1438.5553511591	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	1624.5179853173	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	1759.07122733272	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	1271.57690467421	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	22289.2318017497	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	27712.0940156283	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	23382.4275146801	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	80.880024728678	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	1156.9776626785	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	1185.01212487464	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	1659.67498856213	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	324.857803417478	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	4994.1262785683	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	3448.52674768473	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	256.33235445502	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	464.769883671744	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	3720.49076542835	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	344.513172787083	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	288.387005493701	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	212.339616932916	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	2478.37117558042	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	3721.82239484106	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	974.052302690403	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K10946; methane/ammonia monooxygenase subunit C"	125.06918532531	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K10946; methane/ammonia monooxygenase subunit C"	942.419780845888	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K10946; methane/ammonia monooxygenase subunit C"	1275.68208587824	"K10946; methane/ammonia monooxygenase subunit C"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	773.85516525474	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	765.197393590087	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	852.669554075555	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	31.3755542610996	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	218.170044400401	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	55.2383416999922	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	680.555570583408	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	579.634667601597	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	832.298928411987	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	298.500282265458	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	414.995564234644	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	512.176666215491	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	439.610027922983	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	320.021652365876	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	115.518880450277	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	116.264513913269	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	96.2568311730427	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	569.666776502761	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	601.940825109749	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	716.168241980178	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	336.30978865117	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	305.001114772538	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	476.198725218492	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	567.790953299684	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	684.53300018075	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	493.830314255084	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	766.258837224186	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	1621.57251926352	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	835.107139827922	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	12.2410748140157	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	85.141850826345	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	155.681595974687	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	10.1274906964076	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	4.22262919637946	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	36.4441614161371	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	15.1697881187447	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	1.26062799401383	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	5.9856979467981	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	18.810778024796	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	3.35075323139778	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	6.66590956801651	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	3.09377613249062	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	19.3817750260576	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	23.3038143134713	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	67.2445379522889	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	2.48211691314861	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	8.89912099473226	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K10535; hydroxylamine dehydrogenase [EC:1.7.2.6]"	5.29920549046459	"K10535; hydroxylamine dehydrogenase"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	86.502735784237	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	86.8519908691653	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	76.3960305422344	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	169.002362188089	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	143.028939284971	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	82.8045166648158	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	80.3363039363642	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	91.2685071120286	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	78.680257272219	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	147.614844246431	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	114.068154212208	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	92.6864823401851	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	133.383844048204	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	128.626198356828	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	71.889548582584	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	62.822204899093	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	52.0905678413882	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	91.36795947879	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	90.2796365725616	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	82.0835306265893	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	137.020224494634	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	137.008446938796	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	65.2614674322539	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	97.4601604813375	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	80.9403517158524	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	101.317993050645	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	941.268984439945	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	1367.78694511675	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	973.668050089345	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	34.2469685733679	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	6.1516626630869	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	9.38333642618075	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	1.63923037490203	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	44.1211606165683	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	6.28465177502201	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	43.2646961594182	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	42.9121132497863	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	140.343647566864	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	25.7792347818078	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	10.1200020620279	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	9.47114651122346	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	4.43044114973315	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	5.08035259393178	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	59.5079544076141	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	10.2151318009366	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	79.9253725577752	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	29.0301629379673	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K00371; nitrate reductase / nitrite
+oxidoreductase, beta subunit [EC:1.7.5.1
+1.7.99.-]"	35.7255003916425	"K00371; nitrate reductase/nitrite oxidoreductase, beta subunit"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	98.2395119762456	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	93.9314169588196	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	90.7958912244251	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	200.757744203972	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	168.752108681191	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	105.817131943945	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	103.786331785734	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	113.3190705738	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	90.0256365830588	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	170.086114369127	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	140.507662210742	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	114.621357347329	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	166.353385021202	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	157.280892033242	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	81.5438765199357	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	68.5863119540858	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	59.9089407184834	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	104.928338645011	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	100.180779784115	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	98.022720896764	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	159.23097983386	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	154.230237426494	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	74.905514892444	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	108.615786506665	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	93.8989503915424	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	128.966482582414	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	224.891306047653	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	273.697264890073	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	222.250082076861	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	64.1351417964553	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	7.10765854057824	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	16.417384191751	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	0.235575033104536	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	12.7505003031496	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	1.79369517361268	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	16.1939607023003	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	13.6262135543146	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	34.4928468738037	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	5.67608128758891	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	2.47222140557167	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	2.04129962696106	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	5.57622990779009	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	1.6007619859578	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	19.6059030439696	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	7.46346447739217	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	15.726749044876	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	7.55904160185607	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K00370; nitrate reductase / nitrite
+oxidoreductase, alpha subunit [EC:1.7.5.1
+1.7.99.-]"	5.80583348703121	"K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	325.356993267479	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	323.326535361459	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	329.500676818532	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	412.253758944303	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	221.109446537762	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	174.185161849584	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	268.405485289268	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	266.018629833717	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	331.352679426271	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	186.227143572146	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	209.965094226749	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	265.590993523212	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	211.588955844601	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	163.681736263058	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	231.793645459273	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	233.765653629483	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	81.4025820819658	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	276.361384293225	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	267.771731918576	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	335.941284477576	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	168.807944265248	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	164.658764634364	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	247.518503956778	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	289.101034657245	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	309.075603071845	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	270.619542987941	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	123.055813552225	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	204.723415766339	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	110.859838188967	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	714.025224953792	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	60.1110372194907	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	243.89871189183	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	43.8601198820758	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	2453.39043816647	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	119.146127494092	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	1256.2744090785	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	1749.71132913608	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	4653.97823714678	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	944.502844478918	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	10.7876463235685	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	6.21841464667327	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	2.44010359860505	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	29.8966875111631	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	1339.70139622724	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	163.614115668089	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	975.5212409462	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	422.48661893438	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K00368; nitrite reductase (NO-forming)
+[EC:1.7.2.1]"	576.180576732431	"K00368; nitrite reductase (NO-forming)"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	4.89581467668136	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.33816228572925	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.01643005244956	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0.326912983795349	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	4.33662896646593	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	1.17136682060475	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.8135687132977	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.93438605664307	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.8695358364491	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.99762937490523	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	4.18991276763342	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.68333947280549	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	4.87748319479741	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.68965699705562	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0.113406958744617	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0.0591042045430345	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	1.21210081886585	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.60121842469892	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.00024642814494	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.19055920347621	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.20932533855677	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.36305983394048	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.53497307343249	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.80462840880895	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.38960043826157	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	4.71939771495671	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.15956329884862	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.44013842683561	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	1.33572366813709	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	3.49740575533558	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0.491489662835365	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	1.58375138559911	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0.634176268965512	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	88.4840614937253	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	2.94338955191134	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	19.8387503658183	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	86.2272851822739	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	78.4986288200619	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	18.1033402062813	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	0.208701080522174	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	12.1964501150741	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	7.20757860475578	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	36.7121720287714	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	18.5920609116368	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K15864; nitrite reductase (NO-forming) /
+hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]"	10.8408359743718	"K15864; nitrite reductase (NO-forming)/hydroxylamine reductase"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	2.27243090583063	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	1.3232260112213	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	3.40371563727258	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	0	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	1.01389227967515	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	1.34665014527478	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	2.85379017588402	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	15.8629884196826	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	4.9453563199064	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	54.8136103993043	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	27.5087327106622	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	28.724336015336	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	42.6280123754583	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	73.1949883035072	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	0.357692014066767	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	0.477629372239215	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	3.58403237466512	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	0.62595165281625	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	0.95303704249849	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	3.52899137350227	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	60.5866458856235	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	59.4927290348085	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	31.0041507512201	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	24.2698772748589	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	18.7190189768571	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	36.2241662740214	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	1.64117331231839	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	2.16147670711126	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	1.79736851484412	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	0	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	0	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	0.843190170683476	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	0.431864667102426	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	261.44709679084	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	7.34760743359954	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	187.658383562383	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	224.327808757414	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	15.3331145224557	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	101.28697923201	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	0	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	0	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	0.0676403228966894	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	4.78600222250097	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	258.715494091223	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	28.6429744310105	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K15876; cytochrome c nitrite reductase small
+subunit"	3.84109079581899	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K15876; cytochrome c nitrite reductase small
+subunit"	56.2021480275003	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K15876; cytochrome c nitrite reductase small
+subunit"	38.4265939768503	"K15876; cytochrome c nitrite reductase small subunit"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	2.21695112785828	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.56422300566178	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.958402995386803	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.40111488315328	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.755553724295	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.81268139458481	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	10.506314358265	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	5.06773417801601	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	50.7718515489216	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	30.2386890238438	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	26.8215264625479	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	41.1595712987745	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	70.2999291766743	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.51002210913608	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.673756133967032	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	3.43670268314896	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.12530847469604	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.12496128902052	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	3.43522913302224	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	56.8663992691979	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	52.0419000681095	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	27.8443366636603	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	24.4453261391815	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	15.5657757141094	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	31.2813199268466	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.652308259109396	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.73669920614573	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	1.4969502134067	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.22788679711487	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.0816568909764823	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.390536238672633	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.548802011030629	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	240.620374416395	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	3.99905916747405	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	283.179363822292	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	122.557566393591	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	123.025897911055	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	152.802661434651	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.112674357946378	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.133844705977695	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	0.266612898677541	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	334.990226004134	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	17.4590993832139	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	31.8591870304127	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	214.198244132112	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K03385; nitrite reductase (cytochrome c-552)
+[EC:1.7.2.2]"	172.779113190618	"K03385; nitrite reductase (cytochrome c-552)"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	186.578203616821	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	195.244119991701	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	183.595554135191	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	64.2175187094839	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	138.056807400981	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	64.8424456059166	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	158.011045343813	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	172.437036979554	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	176.105491186959	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	213.893173315276	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	189.983151821822	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	190.411362359477	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	207.213538149187	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	247.848726427042	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	103.446684221677	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	113.100935878889	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	104.866704096039	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	153.249939663795	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	134.446390424262	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	188.860384783008	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	216.94619497639	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	225.553361588417	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	168.137358876734	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	199.725776255201	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	199.911685251163	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	249.745339905904	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	29.6255510186762	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	44.4318980961891	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	32.0754689635032	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	97.4976813833079	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	88.8281768264724	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	105.247495949975	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	1.4474155624043	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	35.1279432958044	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	2.61958729671006	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	98.4806805435561	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	23.4470242540324	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	37.1025590668289	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	9.35445330547898	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	2.45747708645537	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	4.3063665003726	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	22.4434615299773	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	1.0852210800815	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	53.6730642551113	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	70.0361500986912	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	11.6517947247419	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	6.63540971143455	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K04561; nitric oxide reductase subunit B
+[EC:1.7.2.5]"	26.2838364495336	"K04561; nitric oxide reductase subunit B"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	108.315048095341	"K00376; nitrous-oxide reductase"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	112.176592610258	"K00376; nitrous-oxide reductase"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	118.716793718406	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	56.8735016915821	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	84.8664245773888	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	93.645037335405	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	95.413278847447	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	124.572746732013	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	101.581520741425	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	136.905819754786	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	132.429863782567	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	128.385634595266	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	124.367799830695	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	144.26376616599	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	34.2406628127667	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	36.7149390679866	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	29.6681497944622	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	89.4993430869232	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	82.7591832507879	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	106.086496588876	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	145.987414293482	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	155.927245690802	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	126.535538645902	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	138.33774749615	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	111.922524060933	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	147.254045954796	"K00376; nitrous-oxide reductase"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	99.033833321856	"K00376; nitrous-oxide reductase"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	154.021518426462	"K00376; nitrous-oxide reductase"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	94.2645233170308	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	174.554989077066	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	54.679881806507	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	262.705768484012	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	20.9894072789862	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	934.251245230463	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	101.067231529677	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	707.884759329335	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	555.659175982231	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	1851.52815857987	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	589.143793986472	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	4.3688443082199	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	5.52594242450064	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	1.75611016818697	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	35.1928634637288	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	759.628826847367	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	153.608277715209	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	643.482292814251	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	797.184741561811	"K00376; nitrous-oxide reductase"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K00376; nitrous-oxide reductase [EC:1.7.2.4]"	633.15573869713	"K00376; nitrous-oxide reductase"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	11.1018883073199	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	13.8832666843001	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	11.7077418435728	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	43.3316895169568	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	33.625480407104	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	25.3495982323302	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	14.2011385665432	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	15.2006418199475	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	19.4729899227137	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	20.2865893524417	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	22.5916478208984	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	22.3551792441164	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	22.8518129613191	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	13.4110501518527	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	3.70105878002233	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	3.97413144652875	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	50.1769559499017	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	22.1416228714133	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	12.7778665541255	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	16.7696561095277	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	21.9818794601156	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	23.5490518249557	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	17.6823562150648	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	23.6743200919135	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	21.9687473264243	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	21.3561518541098	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	10.1407125414651	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	10.8237462816322	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	9.85280507628137	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	10.3206934485445	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	4.01517334934859	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	23.6412934789923	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	0.215675576912032	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	65.2108547357648	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	5.2926355586591	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	37.2739296668339	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	27.7554130016987	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	8.31355184006489	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	19.8271038734236	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	0.0647357330482498	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	0.287462324555597	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	19.416494115959	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	0.605866313473056	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	32.8466845117297	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	5.81505746162392	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	2.43069026922921	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	8.27291983424503	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K02567; periplasmic nitrate reductase NapA
+[EC:1.7.99.-]"	5.24444586163646	"K02567; periplasmic nitrate reductase NapA"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K02568; cytochrome c-type protein NapB"	13.2688438449541	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K02568; cytochrome c-type protein NapB"	17.461313031149	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K02568; cytochrome c-type protein NapB"	12.4421575962094	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K02568; cytochrome c-type protein NapB"	33.6895091439139	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K02568; cytochrome c-type protein NapB"	29.6112851557144	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K02568; cytochrome c-type protein NapB"	23.6423241992733	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K02568; cytochrome c-type protein NapB"	13.1157690193832	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K02568; cytochrome c-type protein NapB"	13.4153601301903	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K02568; cytochrome c-type protein NapB"	18.515275357276	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	18.2016466151826	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	18.1097922437611	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	26.6090291275495	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	18.2529713866426	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K02568; cytochrome c-type protein NapB"	14.9457096145301	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K02568; cytochrome c-type protein NapB"	3.16252581300737	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K02568; cytochrome c-type protein NapB"	2.53844981050212	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K02568; cytochrome c-type protein NapB"	63.9520662652859	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K02568; cytochrome c-type protein NapB"	17.9972420957469	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K02568; cytochrome c-type protein NapB"	15.1206236013986	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K02568; cytochrome c-type protein NapB"	14.7931818057403	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	17.8246076489512	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	18.755345328415	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K02568; cytochrome c-type protein NapB"	16.1511722960549	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	21.9145433558801	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	22.0232194082688	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K02568; cytochrome c-type protein NapB"	17.5818317274492	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K02568; cytochrome c-type protein NapB"	16.5645146315476	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K02568; cytochrome c-type protein NapB"	15.8135305602446	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K02568; cytochrome c-type protein NapB"	16.4022522630428	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K02568; cytochrome c-type protein NapB"	7.55638097919852	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K02568; cytochrome c-type protein NapB"	2.85262474551591	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K02568; cytochrome c-type protein NapB"	29.0266742149096	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K02568; cytochrome c-type protein NapB"	0.341312398193852	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K02568; cytochrome c-type protein NapB"	1.19523123375358	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K02568; cytochrome c-type protein NapB"	0.565444930039221	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	1.56838941865692	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	4.18865638708664	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	8.97984960631024	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	0	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K02568; cytochrome c-type protein NapB"	0	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K02568; cytochrome c-type protein NapB"	0	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K02568; cytochrome c-type protein NapB"	30.9232023784004	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K02568; cytochrome c-type protein NapB"	0	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	3.24167845022023	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	1.56625165970784	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K02568; cytochrome c-type protein NapB"	1.73964241204189	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K02568; cytochrome c-type protein NapB"	0.660154997136494	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K02568; cytochrome c-type protein NapB"	0	"K02568; cytochrome c-type protein NapB"
+"Nitrifying_Day0_rep1_DNA"	"DNA"	"Week 0"	"Inoculum"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	16.3225648041791	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Day0_rep2_DNA"	"DNA"	"Week 0"	"Inoculum"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	13.6068678185726	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Day0_rep3_DNA"	"DNA"	"Week 0"	"Inoculum"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	15.7461142781747	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Aerobic_rep1_DNA"	"DNA"	"Week 4"	"Aerobic"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	43.3479129247954	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Aerobic_rep2_DNA"	"DNA"	"Week 4"	"Aerobic"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	67.1380009472082	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Aerobic_rep3_DNA"	"DNA"	"Week 4"	"Aerobic"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	77.5034757697815	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Ironreduction_rep1_DNA"	"DNA"	"Week 4"	"Iron reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	62.7461898948852	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Ironreduction_rep2_DNA"	"DNA"	"Week 4"	"Iron reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	34.262855406182	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Ironreduction_rep3_DNA"	"DNA"	"Week 4"	"Iron reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	17.6824005599127	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	130.635251881681	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_DNA"	"DNA"	"Week 4"	"Nitrate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	86.7778325160224	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	82.9411182362345	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	108.517489727355	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Sulphatereduction_rep3_DNA"	"DNA"	"Week 4"	"Sulphate reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	162.279540343437	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Aerobic_rep1_DNA"	"DNA"	"Week 8"	"Aerobic"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	102.129787856225	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Aerobic_rep2_DNA"	"DNA"	"Week 8"	"Aerobic"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	100.89030840385	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Aerobic_rep3_DNA"	"DNA"	"Week 8"	"Aerobic"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	110.413575647779	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Ironreduction_rep1_DNA"	"DNA"	"Week 8"	"Iron reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	72.3090038816681	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Ironreduction_rep2_DNA"	"DNA"	"Week 8"	"Iron reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	74.0942649182513	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Ironreduction_rep3_DNA"	"DNA"	"Week 8"	"Iron reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	17.9267555021641	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	132.33509836415	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	151.488466236449	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Nitratereduction_rep3_DNA"	"DNA"	"Week 8"	"Nitrate reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	61.530695357934	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	68.3621619779126	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	47.4500538664622	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_DNA"	"DNA"	"Week 8"	"Sulphate reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	93.4300714700635	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Day0_rep1_RNA"	"RNA"	"Week 0"	"Inoculum"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	0.208064643800414	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Day0_rep2_RNA"	"RNA"	"Week 0"	"Inoculum"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	1.20675383127479	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Day0_rep3_RNA"	"RNA"	"Week 0"	"Inoculum"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	0.358926142111293	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"RNA"	"Week 4"	"Aerobic"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	0.405041531215344	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"RNA"	"Week 4"	"Aerobic"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	9.97383477240649	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"RNA"	"Week 4"	"Aerobic"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	7.94649657596875	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"RNA"	"Week 4"	"Iron reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	0.652626744240996	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"RNA"	"Week 4"	"Iron reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	24.9007499998303	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"RNA"	"Week 4"	"Iron reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	0.180895452722091	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	27.3943299597874	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"RNA"	"Week 4"	"Nitrate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	10.0749273892295	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	10.9965265211535	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"RNA"	"Week 4"	"Sulphate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	4.32530488889206	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"RNA"	"Week 8"	"Aerobic"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	2.29768988253564	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"RNA"	"Week 8"	"Aerobic"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	4.06213059634663	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"RNA"	"Week 8"	"Aerobic"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	2.87713387434644	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"RNA"	"Week 8"	"Iron reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	0	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	28.691335160814	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"RNA"	"Week 8"	"Nitrate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	9.16788692634963	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"1"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	1.72541853167326	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"2"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	8.41509829548225	"K00372; assimilatory nitrate reductase catalytic subunit"
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"RNA"	"Week 8"	"Sulphate reduction"	"3"	"K00372; assimilatory nitrate reductase catalytic
+subunit [EC:1.7.99.-]"	9.10975288244296	"K00372; assimilatory nitrate reductase catalytic subunit"

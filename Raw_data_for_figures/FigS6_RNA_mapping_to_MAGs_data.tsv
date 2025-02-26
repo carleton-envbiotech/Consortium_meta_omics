@@ -1,0 +1,353 @@
+"Sample_name"	"Time_point"	"Metabolic_treatment"	"Replicate_number"	"Genome bin"	"percent"
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"Other"	16.0548587756682
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"Other"	15.8519726239305
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"Other"	18.30736177984
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"Other"	15.1692295539252
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"Other"	6.08746600111159
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"Other"	10.7958555294407
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"Other"	8.59344732015457
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"Other"	8.11026057552097
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"Other"	4.44312327814616
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"Other"	3.57598526823798
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"Other"	8.15511492470266
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"Other"	20.1297181537324
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"Other"	4.32956210700291
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"Other"	2.08036160184107
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"Other"	2.67422776239698
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"Other"	4.68919536380376
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"Other"	5.12623333410357
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"Other"	8.21553781982687
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"Other"	7.00673623581542
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"Other"	2.09638759161518
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"Other"	3.69167614868276
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"Other"	12.6810281392823
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	38.4068376646946
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	42.2654325219764
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	36.0724083349532
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.484195491577668
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	2.36160288405756
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	2.25999853261696
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	15.9232328754889
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.715271890982754
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	30.156312027717
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	2.72343024693307
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.500562858304099
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.685856963502901
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	7.32687773769961
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.254690259439278
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.195605282960082
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.405468440233187
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	9.65376219855042
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	2.03148754457964
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	1.94175625014771
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	0.062500788558489
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	1.22263220717805
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.48"	1.35570977251347
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	0.0238741215527617
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	0.0125099242321953
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MaxBin2Refined-group-4.002"	0.0151974606193603
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	0.0569649588924221
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	0.0203489222455327
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-4.002"	0.0159895811792761
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	4.18765595361809
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	45.1300806597511
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-4.002"	3.33092082867721
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	78.5221417056816
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	45.2085817842475
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	15.6895554618016
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	51.5355631365731
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	0.00886126758059957
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	0.0345514541833691
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-4.002"	0.00850256110519702
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-4.002"	1.9095069744514
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	77.0913834260343
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	6.35514133807818
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-4.002"	0.5226126726055
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-4.002"	61.0051802147139
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MaxBin2Refined-group-4.002"	50.7891237216475
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	0.00632282671260354
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	0.00295387779958594
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MaxBin2Refined-group-5.004"	0.00878827330918304
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	0.0275606824927566
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	0.0298671301187297
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-5.004"	0.106962917048371
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	0.604785820840668
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	20.6681526658108
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-5.004"	3.8651690129166
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	1.62446045658465
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	22.9937276728416
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	1.78385427016825
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	16.4852780047471
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	0.00503030087584182
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	0.01286501973082
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-5.004"	0.0413350077750664
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-5.004"	2.0044396176568
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	0.928079585676057
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	3.93466240810491
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.004"	0.0335287923987739
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.004"	22.2437415481823
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MaxBin2Refined-group-5.004"	4.97682642885384
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.013338672609224
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.014460994085615
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0119549748095662
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	34.6747346699269
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.171611746215042
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0193250896465536
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.00915892356787341
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0122918456280564
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0196422538581785
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0104754593942018
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.016287461495679
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0196585833131736
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0145178776977876
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	1.19749634246219
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	1.22258233075672
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.011584050084942
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0289453212252852
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.00792900183610148
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.123352117257189
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.00974035611852586
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.00834192273004536
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MetaBAT2Refined-group-2.27"	0.0172575693768017
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	1.5475948963887
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	1.49144395029463
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	1.51516652438163
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.443349136998281
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.0423450705765376
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.454230866847505
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.594182291889229
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	3.37521604124663
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	1.0170927095098
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.970254574574367
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	3.08040584623941
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	10.7348313201314
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	1.62696691578773
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.0090295194966869
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.0204415739402654
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.034704113186435
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.652442020780861
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	2.41233161370306
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.651564855209034
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	0.60404907277567
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	1.95844301875774
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MBSoxNitrifying4mlFreshRep3_metaMDBG_complete.39"	3.14152854299248
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	1.39592232703279
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	2.11390236712186
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MBSoxNitrifying4mlFreshRep3_complete.11"	1.37665175285589
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.122740736549441
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0505528005541496
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0255969687669245
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.245817062533141
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.193368975454174
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.118450412583752
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0507965182839087
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.151436959869941
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.433141244390198
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0769788230138406
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0140447208415978
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0171190236997333
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.019586669848737
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.132319707927999
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.117876707381195
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0510873192090724
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.0462661811691539
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.095604491327906
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MBSoxNitrifying4mlFreshRep3_complete.11"	0.117427688156976
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	8.32310848849349
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	8.03922808459738
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"QpsNitrifying4mlFrozenRep1_complete.20"	9.18522881529475
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	0.0263011787090893
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	0.0627467365144623
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"QpsNitrifying4mlFrozenRep1_complete.20"	0.0284711621725821
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	0.0131080691099216
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	2.68023893403838
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"QpsNitrifying4mlFrozenRep1_complete.20"	0.0165476117122196
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	1.17616406799927
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	3.94324356122187
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	17.2160971364234
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	1.97521013754063
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	0.00348367749334672
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	0.0182521097646113
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"QpsNitrifying4mlFrozenRep1_complete.20"	0.00201399857105734
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"QpsNitrifying4mlFrozenRep1_complete.20"	0.022977563139774
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	2.45244698739927
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	0.865550272966411
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"QpsNitrifying4mlFrozenRep1_complete.20"	1.60080741856227
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"QpsNitrifying4mlFrozenRep1_complete.20"	2.81248521350605
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"QpsNitrifying4mlFrozenRep1_complete.20"	5.94395567065125
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0712382191929872
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0237799750414109
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0593634735110291
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0160615271022954
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0449173398824229
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0335857422035849
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	0.501827896195466
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	5.04611455086126
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-8.003"	0.340362425754989
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	2.09187057550003
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	3.70333022268332
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	0.094370948580825
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	0.327384558093237
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	0.00293793730398652
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0612633554575145
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0164838310608182
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-8.003"	0.41873512489313
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	1.40321494146482
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	0.795528650357446
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-8.003"	0.0110306317561088
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-8.003"	0.47691937730823
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MaxBin2Refined-group-8.003"	0.221221636139713
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	1.27844908639826
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	1.40088284022735
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MaxBin2Refined-group-6.003"	1.22083379954217
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	1.19068008295678
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	5.59767184473133
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-6.003"	1.86924060681303
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	0.205756963604223
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	0.144063767585246
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-6.003"	0.567703837053225
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	0.216706087387039
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	0.154090816719432
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	0.429875437396917
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	0.532900360455761
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	2.10346172708952
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	2.60820632212931
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-6.003"	2.21706549235131
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-6.003"	1.0314454945275
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	0.0932497652377105
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	4.2481812253426
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.003"	0.0737559936059492
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.003"	0.14902766952448
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MaxBin2Refined-group-6.003"	0.472652894821754
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	2.39376872449586
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	2.73550692864766
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MBSoxNitrifying4mlFreshRep3_complete.19"	2.08720273130982
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.078037865097708
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.470457507307943
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_complete.19"	5.98536034703408
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.23240794685993
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.566190192318601
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.276470003229631
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.189178133494196
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.519895236159836
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	1.93189543838378
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.277689256531563
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.0226579246997609
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.0776218745837224
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MBSoxNitrifying4mlFreshRep3_complete.19"	10.5344775027642
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.211709067942171
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.382154370274306
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.423917597751377
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.142824530148781
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.285565397535658
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MBSoxNitrifying4mlFreshRep3_complete.19"	0.350926791359844
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	1.19928916477224
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	0.203439941748187
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MaxBin2Refined-group-6.013"	1.33110538289995
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	4.0143619960753
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	3.95611164898407
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-6.013"	1.11871509875773
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	0.0949885531225511
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	0.0972992613576436
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-6.013"	3.19039239419607
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	1.51065434877445
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	0.0979921600924104
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	0.222712289077987
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	3.50645463691987
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	0.683935410591622
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	3.1326564126688
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-6.013"	0.645712494160383
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-6.013"	7.21952076160547
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	0.0607106199908279
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	4.40147322549802
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-6.013"	0.0322875145702131
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-6.013"	0.572276088753066
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MaxBin2Refined-group-6.013"	2.58827799423444
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.76653891580445
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.853599354644834
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"NitrifyingCombined_metaMDBG_complete.11"	0.731356477969691
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.0422904080111138
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.049406639546401
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"NitrifyingCombined_metaMDBG_complete.11"	0.0412435722264746
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.0452824205615472
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.234810884024895
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"NitrifyingCombined_metaMDBG_complete.11"	0.0779101413259706
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.060537600177804
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.218929820527081
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.353727016930153
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.0765628886939406
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.00214197631634259
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.00394498049667392
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"NitrifyingCombined_metaMDBG_complete.11"	0.00730163439542343
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"NitrifyingCombined_metaMDBG_complete.11"	0.0302547157458542
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.065851032198131
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.0649118892704512
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"NitrifyingCombined_metaMDBG_complete.11"	0.0301397772747427
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"NitrifyingCombined_metaMDBG_complete.11"	0.0420436576407369
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"NitrifyingCombined_metaMDBG_complete.11"	0.0743559572627691
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00390893966715145
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	0.0029496819504388
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00396784991415532
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00249046896196455
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00513439559400291
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-5.019"	0.0471744793447786
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	1.15135676250512
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	1.34709959593958
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-5.019"	6.04159318422056
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00729398669795895
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	1.21267888465817
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	3.77692640993249
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00808859507209867
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	0.000593195858000215
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	0.0013610182713525
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00821967614689479
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-5.019"	8.16605279170614
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00776101450906544
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	0.575587301383839
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-5.019"	0.167315268358346
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00825749402914721
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MaxBin2Refined-group-5.019"	0.00862760120401074
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0606975790945131
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.065056641026392
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0496522555765207
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0578287273482906
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	1.35631216427372
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	1.57955480529235
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0205485185456808
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0473103671798074
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.064395187087647
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0214886324835432
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0465026578677163
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.112660967539753
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0536643769334862
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.245117156829078
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.820097887239395
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.756752846472071
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.125230491947224
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0333454844166556
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.910058278499043
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0141787409857812
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0415425916549718
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"MEGAHIT-MaxBin2Refined-group-2.022_sub"	0.0738162883808722
+"Nitrifying_Day0_rep1_RNA"	"Week 0"	"Inoculum"	1	"Unmapped"	28.4542515974222
+"Nitrifying_Day0_rep2_RNA"	"Week 0"	"Inoculum"	2	"Unmapped"	24.9228802926756
+"Nitrifying_Day0_rep3_RNA"	"Week 0"	"Inoculum"	3	"Unmapped"	28.0237601132131
+"Nitrifying_Week4_Aerobic_rep1_RNA"	"Week 4"	"Aerobic"	1	"Unmapped"	43.5931725153748
+"Nitrifying_Week4_Aerobic_rep2_RNA"	"Week 4"	"Aerobic"	2	"Unmapped"	79.6934471682865
+"Nitrifying_Week4_Aerobic_rep3_RNA"	"Week 4"	"Aerobic"	3	"Unmapped"	75.6186947006091
+"Nitrifying_Week4_Ironreduction_rep1_RNA"	"Week 4"	"Iron reduction"	1	"Unmapped"	67.5764426214031
+"Nitrifying_Week4_Ironreduction_rep2_RNA"	"Week 4"	"Iron reduction"	2	"Unmapped"	11.6322297923001
+"Nitrifying_Week4_Ironreduction_rep3_RNA"	"Week 4"	"Iron reduction"	3	"Unmapped"	46.473914692011
+"Nitrifying_Week4_Nitratereduction_rep1_RNA"	"Week 4"	"Nitrate reduction"	1	"Unmapped"	7.24856233779593
+"Nitrifying_Week4_Nitratereduction_rep2_RNA"	"Week 4"	"Nitrate reduction"	2	"Unmapped"	9.9972191323693
+"Nitrifying_Week4_Sulphatereduction_rep1_RNA"	"Week 4"	"Sulphate reduction"	1	"Unmapped"	26.3851183586946
+"Nitrifying_Week4_Sulphatereduction_rep2_RNA"	"Week 4"	"Sulphate reduction"	2	"Unmapped"	11.8463005872373
+"Nitrifying_Week8_Aerobic_rep1_RNA"	"Week 8"	"Aerobic"	1	"Unmapped"	93.3661569812811
+"Nitrifying_Week8_Aerobic_rep2_RNA"	"Week 8"	"Aerobic"	2	"Unmapped"	89.0992035917206
+"Nitrifying_Week8_Aerobic_rep3_RNA"	"Week 8"	"Aerobic"	3	"Unmapped"	80.6015963180405
+"Nitrifying_Week8_Ironreduction_rep3_RNA"	"Week 8"	"Iron reduction"	3	"Unmapped"	63.2664248137964
+"Nitrifying_Week8_Nitratereduction_rep1_RNA"	"Week 8"	"Nitrate reduction"	1	"Unmapped"	4.69664008547195
+"Nitrifying_Week8_Nitratereduction_rep2_RNA"	"Week 8"	"Nitrate reduction"	2	"Unmapped"	67.6504910351093
+"Nitrifying_Week8_Sulphatereduction_rep1_RNA"	"Week 8"	"Sulphate reduction"	1	"Unmapped"	94.5525746694965
+"Nitrifying_Week8_Sulphatereduction_rep2_RNA"	"Week 8"	"Sulphate reduction"	2	"Unmapped"	5.38626295847492
+"Nitrifying_Week8_Sulphatereduction_rep3_RNA"	"Week 8"	"Sulphate reduction"	3	"Unmapped"	17.187263303122
