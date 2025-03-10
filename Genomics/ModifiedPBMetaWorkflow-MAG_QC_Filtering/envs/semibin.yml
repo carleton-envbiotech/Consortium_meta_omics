@@ -1,0 +1,8 @@
+name: semibin_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - semibin = 2.0.2
+#  - semibin=1.5.0=pyh7cba7a3_0

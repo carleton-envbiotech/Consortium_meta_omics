@@ -1,0 +1,7 @@
+name: gtdbtk_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - gtdbtk == 2.4.0
