@@ -4,6 +4,8 @@
 
 Datasets can be found at 10.5281/zenodo.14861210 and under BioProject PRJNA1165788
 
+R figure generation described in https://github.com/carleton-envbiotech/Consortium_meta_omics/blob/main/Nitrifying_consortium_data_analyses_codebook_2025_02_15.Rmd with input files in https://github.com/carleton-envbiotech/Consortium_meta_omics/tree/main/Raw_data_for_figures
+
 # Metagenome Assembly
 
 ## PacBio HiFi Long Reads
