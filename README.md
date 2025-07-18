@@ -205,6 +205,109 @@ nfbintax <- plotBins(NFBin, samples =rna)
 
 write.table(nfbintax$data, file = "nfbins_RNA.tsv", sep = "\t", row.names = FALSE, col.names = TRUE)
 ```
+
+##MAG Phylogenetics and Annotation
+
+###Abricate
+
+
+```
+#!/bin/bash
+#SBATCH --job-name=abricate
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=64G
+#SBATCH --time=48:00:00
+#SBATCH --ntasks=1
+#SBATCH --comment=""
+#SBATCH --partition=
+#SBATCH --account=
+#SBATCH --cluster 
+
+# Activate Conda environment
+echo "Activating Conda environment..."
+source /condaforge/etc/profile.d/conda.sh
+conda activate /condaforge/abricate
+
+# Run
+
+abricate -db card --threads 32 --minid 60 MAGs/*.fa > cardmags.out
+abricate -db vfdb --threads 32 --minid 60 MAGs/*.fa > vfdbmags.out
+```
+###Phlyogenetics 
+
+Acquire reference genomes:
+```
+esearch -query '"Legionellales"[ORGN] AND "latest refseq"[filter] AND "reference genome"[filter]' -db assembly | esummary | xtract -pattern DocumentSummary -def "NA" -element AssemblyAccession > Legionellales-refseq-reference-accs.txt
+```
+    RefSeq accession for Legionellales accessed 2025/07/14 – removed GCF_002776555.1
+```
+esearch -query '"Achromobacter"[ORGN] AND "latest refseq"[filter] AND "reference genome"[filter]' -db assembly | esummary | xtract -pattern DocumentSummary -def "NA" -element AssemblyAccession > Achromobacter-refseq-reference-accs.txt
+```
+  Refseq accession for Achromobacter accessed 2025/07/11
+ ```   
+esearch -query '"Mycobacteriaceae"[ORGN] AND "latest refseq"[filter] AND "reference genome"[filter]' -db assembly | esummary | xtract -pattern DocumentSummary -def "NA" -element AssemblyAccession > Mycobacteriaceae-refseq-reference-accs.txt
+ ```
+   RefSeq accession for Mycobacteriaceae accessed 2025/07/11
+
+```
+GToTree -a Legionellales-refseq-reference-ref-accs-GCF_002776555.1-removed.txt -g genbank_files.txt -f fasta_files.txt -H Gammaproteobacteria -t -L Species,Strain -j 12 -o Legionellales_GCF_002776555.1removed 
+```
+Rooted on Pseudomonas aeruginosa PAO1 GCF_000006765.1 - retrieved 2024/04/27
+```
+GToTree -a Achromobacter-refseq-reference-accs.txt -g genbank_files.txt -f fasta_files.txt -H Gammaproteobacteria -t -L Species,Strain -j 48 -o Achromobacter -F
+```
+Rooted on Pseudomonas aeruginosa PAO1 GCF_000006765.1 - retrieved 2024/04/27
+```
+GToTree -a Mycobacteriaceae-refseq-reference-accs.txt -g genbank_files.txt -f fasta_files.txt -H Actinobacteria -t -L Species,Strain -j 48 -o Myco_phylo
+```
+Rooted on Corynebacterium diphtheriae NCTC 13129 GCF_000195815.1 retrieved  2025/07/11
+
+###Bakta Annotation
+```
+!/bin/bash
+#SBATCH --job-name=bakta
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
+#SBATCH --array=1-98%20  # Adjust the 1-100 to match the number of files and %10 for the number of simultaneous tasks
+#SBATCH --output=bakta-array-%A_%a.out
+#SBATCH --error=bakta-array-%A_%a.err
+#SBATCH --time=5:00:00
+#SBATCH --ntasks=1
+#SBATCH --comment=""
+#SBATCH --partition=
+#SBATCH --account=
+#SBATCH --cluster 
+
+# Activate Conda environment
+
+# Set BAKTA_DB environment variable
+export BAKTA_DB=/Databases/Bakta/db
+
+# Define path to the input files and output directory
+INPUT_DIR="/FinalMAGS"
+OUTPUT_DIR="/FinalMAGS/baktaarray"
+
+# Use SLURM_ARRAY_TASK_ID to get the specific file for this array job
+# Assuming input files are named like 'sample1.fa', 'sample2.fa', etc.
+FILE=$(ls $INPUT_DIR/*.fa | sed -n "${SLURM_ARRAY_TASK_ID}p")
+FILENAME=$(basename $FILE .fa)
+set -e
+
+# Verbose output
+set -x
+
+# Activate Conda environment
+echo "Activating Conda environment..."
+source /conda/etc/profile.d/conda.sh
+conda activate /conda/bakta
+
+# Run Bakta
+bakta --db $BAKTA_DB --output $OUTPUT_DIR/${FILENAME}_bakta --prefix $FILENAME --threads $SLURM_CPUS_PER_TASK --verbose $FILE
+```
+### Clinker Plots
+```
+clinker *.gb -p plot.html -o alignments.csv -dl "," -dc 4 --force -r region_[435000_555000]:37000-97000 region_[44500_146900]:29000-89000 region_[30000_130000]:20000-60000
+```
 # Probe Design
 
 Approach was adapted from methods described in "Rational probe design for efficient rRNA depletion and improved metatranscriptomic analysis of human microbiomes" doi: 10.1186/s12866-023-03037-y
