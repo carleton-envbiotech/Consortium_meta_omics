@@ -205,11 +205,9 @@ nfbintax <- plotBins(NFBin, samples =rna)
 
 write.table(nfbintax$data, file = "nfbins_RNA.tsv", sep = "\t", row.names = FALSE, col.names = TRUE)
 ```
-
 ##MAG Phylogenetics and Annotation
 
 ###Abricate
-
 
 ```
 #!/bin/bash
@@ -233,7 +231,7 @@ conda activate /condaforge/abricate
 abricate -db card --threads 32 --minid 60 MAGs/*.fa > cardmags.out
 abricate -db vfdb --threads 32 --minid 60 MAGs/*.fa > vfdbmags.out
 ```
-###Phlyogenetics 
+###Phlyogenetics
 
 Acquire reference genomes:
 ```
