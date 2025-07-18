@@ -219,7 +219,7 @@ write.table(nfbintax$data, file = "nfbins_RNA.tsv", sep = "\t", row.names = FALS
 #SBATCH --time=48:00:00
 #SBATCH --ntasks=1
 #SBATCH --comment=""
-#SBATCH --partition=
+#SBATCH --partition=standard
 #SBATCH --account=
 #SBATCH --cluster 
 
@@ -239,15 +239,15 @@ Acquire reference genomes:
 ```
 esearch -query '"Legionellales"[ORGN] AND "latest refseq"[filter] AND "reference genome"[filter]' -db assembly | esummary | xtract -pattern DocumentSummary -def "NA" -element AssemblyAccession > Legionellales-refseq-reference-accs.txt
 ```
-    RefSeq accession for Legionellales accessed 2025/07/14 – removed GCF_002776555.1
+RefSeq accession for Legionellales accessed 2025/07/14 – removed GCF_002776555.1
 ```
 esearch -query '"Achromobacter"[ORGN] AND "latest refseq"[filter] AND "reference genome"[filter]' -db assembly | esummary | xtract -pattern DocumentSummary -def "NA" -element AssemblyAccession > Achromobacter-refseq-reference-accs.txt
 ```
-  Refseq accession for Achromobacter accessed 2025/07/11
+Refseq accession for Achromobacter accessed 2025/07/11
  ```   
 esearch -query '"Mycobacteriaceae"[ORGN] AND "latest refseq"[filter] AND "reference genome"[filter]' -db assembly | esummary | xtract -pattern DocumentSummary -def "NA" -element AssemblyAccession > Mycobacteriaceae-refseq-reference-accs.txt
  ```
-   RefSeq accession for Mycobacteriaceae accessed 2025/07/11
+ RefSeq accession for Mycobacteriaceae accessed 2025/07/11
 
 ```
 GToTree -a Legionellales-refseq-reference-ref-accs-GCF_002776555.1-removed.txt -g genbank_files.txt -f fasta_files.txt -H Gammaproteobacteria -t -L Species,Strain -j 12 -o Legionellales_GCF_002776555.1removed 
@@ -274,7 +274,7 @@ Rooted on Corynebacterium diphtheriae NCTC 13129 GCF_000195815.1 retrieved  2025
 #SBATCH --time=5:00:00
 #SBATCH --ntasks=1
 #SBATCH --comment=""
-#SBATCH --partition=
+#SBATCH --partition=standard
 #SBATCH --account=
 #SBATCH --cluster 
 
