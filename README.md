@@ -205,9 +205,9 @@ nfbintax <- plotBins(NFBin, samples =rna)
 
 write.table(nfbintax$data, file = "nfbins_RNA.tsv", sep = "\t", row.names = FALSE, col.names = TRUE)
 ```
-##MAG Phylogenetics and Annotation
+## MAG Phylogenetics and Annotation
 
-###Abricate
+### Abricate
 
 ```
 #!/bin/bash
@@ -231,7 +231,7 @@ conda activate /condaforge/abricate
 abricate -db card --threads 32 --minid 60 MAGs/*.fa > cardmags.out
 abricate -db vfdb --threads 32 --minid 60 MAGs/*.fa > vfdbmags.out
 ```
-###Phlyogenetics
+### Phlyogenetics
 
 Acquire reference genomes:
 ```
@@ -260,7 +260,7 @@ GToTree -a Mycobacteriaceae-refseq-reference-accs.txt -g genbank_files.txt -f fa
 ```
 Rooted on Corynebacterium diphtheriae NCTC 13129 GCF_000195815.1 retrieved  2025/07/11
 
-###Bakta Annotation
+### Bakta Annotation
 ```
 !/bin/bash
 #SBATCH --job-name=bakta
