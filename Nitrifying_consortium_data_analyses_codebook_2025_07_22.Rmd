@@ -1,0 +1,2119 @@
+---
+title: "Nitrifying consortium GitHub codebook"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+# Table of contents
+
+- Figure 1: Visualize the relative abundance and metabolic data for the combined PacBio read set on the starting consortium material (*done*)
+- Figure S1: Optical density and pH data for enrichment cultures grown along a redox gradient representative of WWTPs (*done*)
+- Figure 2: Nitrogen chemistry analyses (*done*)
+- Figure 3: Non-metric multidimensional scaling analyses for metagenomic DNA and RNA sequences obtained from enrichment culture samples (*done*)
+- Figure S2: Beta diversity analyses for metagenome-assembled genomes obtained from enrichment culture samples omitting aerobic cultures (*done*)
+- Figure S3: % RNA mapping to nitrogen cycling genes in coassembly data (*done*)
+- Figure S4: Percent of RNA reads mapped to genome bins obtained from the incubation time series (*done*)
+- Figure 4: Relative abundance and nitrogen metabolism for MAGs >= 1% from enrichment cultures grown along a redox gradient
+- Figure S5: % RNA mapped to different taxa from genome bin data (*done*)
+- Figure S6: Top 25 values for RNA reads mapped to amino acid metabolic pathways (*done*)
+- Appendix I: Preparing SQM directories for downstream analyses (*done*)
+
+# Packages required
+
+Use this chunk of code to load all of the require R packages and prior to running any of the sections below.
+```{r}
+#Load the required libraries for data manipulation
+library(tidyverse)
+library(readxl)
+library(data.table)
+library(glue)
+library(ggtext)
+library(ggh4x)
+library(patchwork)
+library(vegan)
+library(SQMtools) #this workflow relies on v1.7.1 for the plotFunctions() to work properly
+library(plotly)
+```
+
+Use this chunk of code to display the session information and versions of packages. A copy pasted output from my machine has been provided below for reproducibility.
+```{r}
+sessionInfo() #Use this to display versions
+```
+
+
+## Package versions
+
+
+# Figure 1: Visualize the relative abundance and metabolic data for the combined PacBio read set on the starting consortium material
+
+1. Load the required files including the Sylph output and trim it down to the column that contains the combined data for relative abundance.
+```{r}
+#Load the relative abundance and metabolic data from the joint data frame
+Long_read_joint_file_sylph_DRAM <- fread("Fig1_relative_abundance_and_nitrogen_metabolism_PacBio_combined_reads_data.tsv", sep = "\t", header = "auto")
+
+#Write the table to provie source data for figure
+write.table(Long_read_joint_file_sylph_DRAM, file = "Fig1_relative_abundance_and_nitrogen_metabolism_PacBio_combined_reads_data.tsv", sep = "\t", row.names = FALSE)
+```
+
+2. Run the gather function as needed to convert data frames from wide to long formats for visualization
+```{r}
+Long_read_MAGs_sylph_percent_complete_gathered <- Long_read_joint_file_sylph_DRAM %>% 
+                                                  gather(key = Pathway_name, value = Percent_complete, 
+                                                        "3-Hydroxypropionate bi-cycle":"Complex V: V/A-type ATPase, prokaryotes", na.rm=FALSE) %>%
+                                                  select(-c("CAZy: Alpha-galactans": "Sulfur metabolism: thiosulfate => sulfite")) %>% 
+                                                  mutate(group = case_when(grepl("\\:.*", Pathway_name) ~ 
+                                                  sub("\\:.*", "", Pathway_name),
+                                                  !grepl("\\:.*", Pathway_name) ~ "Module")) %>% #maintained up to this step
+                                                  mutate(Pathway_name = gsub("Complex I*:","",Pathway_name)) %>% #had to be more specific in filtering
+                                                  mutate(Pathway_name = gsub("Complex IV*.*:","",Pathway_name)) %>%
+                                                  mutate(Pathway_name = gsub("Complex V*.*:","",Pathway_name))
+
+Long_read_MAGs_sylph_true_false_gathered<- Long_read_joint_file_sylph_DRAM %>%
+                                           gather(Pathway_name, Presence_absence,
+                                                  "CAZy: Alpha-galactans":"Sulfur metabolism: thiosulfate => sulfite", na.rm = FALSE) %>%
+                                           select(-c("3-Hydroxypropionate bi-cycle":"Complex V: V/A-type ATPase, prokaryotes")) %>%
+                                           mutate(group = case_when(grepl("\\:.*", Pathway_name) ~ 
+                                                  sub("\\:.*", "", Pathway_name))) %>%
+                                           mutate(Pathway_name = gsub(".*:","",Pathway_name))
+
+#Clean up the data and reorder
+Long_read_MAGs_sylph_percent_complete_gathered$Pathway_name<-trimws(Long_read_MAGs_sylph_percent_complete_gathered$Pathway_name, which = c("left")) 
+
+Long_read_MAGs_sylph_percent_complete_gathered$Pathway_name = factor(Long_read_MAGs_sylph_percent_complete_gathered$Pathway_name, 
+                                          levels =c(
+                                            
+                                          #Module facet
+                                            
+                                          "Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate", 
+                                          "Pentose phosphate pathway (Pentose phosphate cycle)",
+                                          "Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate",
+                                          "Citrate cycle (TCA cycle, Krebs cycle)",
+                                          "Glyoxylate cycle",
+                                          "Reductive pentose phosphate cycle (Calvin cycle)",
+                                          "Reductive citrate cycle (Arnon-Buchanan cycle)",
+                                          "Dicarboxylate-hydroxybutyrate cycle",
+                                          "Hydroxypropionate-hydroxybutylate cycle",
+                                          "3-Hydroxypropionate bi-cycle",
+                                          "Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)",
+                                          "Acetyl-CoA pathway, CO2 => acetyl-CoA",
+                                          "Methanogenesis, CO2 => methane",
+                                          
+                                          #Complex I
+                                          
+                                          "NADH:quinone oxidoreductase, prokaryotes",
+                                          "NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria",
+                                          "NADH dehydrogenase (ubiquinone) 1 alpha subcomplex",
+                                          
+                                          #Complex II
+                                          
+                                          "Succinate dehydrogenase (ubiquinone)",
+                                          "Succinate dehydrogenase, prokaryotes",
+                                          "Fumarate reductase, prokaryotes",
+                                          
+                                          #Complex III
+                                          
+                                          "Cytochrome bc1 complex respiratory unit", #what's the difference between first and second?
+                                          "Cytochrome bc1 complex",
+                                          "Cytochrome bd ubiquinol oxidase",
+                                          
+                                          #Complex IV high affinity
+                                          
+                                          #"Cytochrome bd ubiquinol oxidase", This level is being duplicated, but may not be an issue
+                                          "Cytochrome c oxidase, cbb3-type",
+                                          
+                                          #Complex IV low affinity
+                                          
+                                          "Cytochrome c oxidase",
+                                          "Cytochrome c oxidase, prokaryotes",
+                                          "Cytochrome aa3-600 menaquinol oxidase",
+                                          "Cytochrome o ubiquinol oxidase",
+                                          
+                                          #Complex V
+                                          "F-type ATPase, prokaryotes and chloroplasts",
+                                          "F-type ATPase, eukaryotes",
+                                          "V/A-type ATPase, prokaryotes",
+                                          "V-type ATPase, eukaryotes"
+                                          ))
+
+#Categorical data script
+Long_read_MAGs_sylph_true_false_gathered$Pathway_name<-trimws(Long_read_MAGs_sylph_true_false_gathered$Pathway_name, which = c("left")) 
+
+Long_read_MAGs_sylph_true_false_gathered$Pathway_name = factor(Long_read_MAGs_sylph_true_false_gathered$Pathway_name, 
+                                          levels =c(
+                                            
+                                          #CAZy facet
+                                            
+                                          "Polyphenolics", 
+                                          "Crystalline Cellulose",
+                                          "Amorphous Cellulose",
+                                          "Xyloglucan",
+                                          "Xylans",
+                                          "Alpha-mannan",
+                                          "Beta-mannan",
+                                          "Mixed-Linkage glucans",
+                                          "Starch",
+                                          "Pectin",
+                                          "Arabinan",
+                                          "Alpha-galactans",
+                                          "Beta-galactan (pectic galactan)",
+                                          "Chitin",
+                                          "Sulf-Polysachharides",
+                                          "Mucin",
+                                          "Fucose Cleavage",
+                                          "Arabinose cleavage",
+                                          "Rhamnose cleavage",
+                                          
+                                          #Nitrogen metabolism
+                                          
+                                          "ammonia => nitrite",
+                                          "Bacterial/Archaeal ammonia oxidation",
+                                          "Bacterial (aerobic-specific) ammonia oxidation",
+                                          "Bacterial (anaerobic-specific) ammonia oxidation",
+                                          "nitrite => nitrate",
+                                          "nitrate => nitrite",
+                                          "nitrite => nitric oxide",
+                                          "nitric oxide => nitrous oxide",
+                                          "nitrous oxide => nitrogen",
+                                          "nitrogen => ammonia",
+                                          "Dissimilatory nitrite reduction to ammonia (DNRA)",
+                                          "Nitrogen fixation alternative", #typo corrected higher up
+                                          
+                                          #Sulfur metabolism
+                                          "dissimilatory sulfate reduction (and oxidation) sulfate => sulfide",
+                                          "thiosulfate => sulfite",
+                                          "Thiosulfate oxidation by SOX complex, thiosulfate => sulfate",
+                                          "tetrathionate => thiosulfate",
+                                          
+                                          #Other reductases
+                                          
+                                          "selenate/Chlorate reduction",
+                                          "TMAO reductase",
+                                          "mercury reduction",
+                                          "arsenate reduction, pt 1",
+                                          "arsenate reduction, pt 2",
+                                          
+                                          #Photosynthesis
+                                          "Photosystem I",
+                                          "Photosystem II",
+                                          
+                                          #Methanogenesis and methanotrophy
+                                          
+                                          "Key functional gene",
+                                          "acetate => methane, pt 1",
+                                          "acetate => methane, pt 2",
+                                          "acetate => methane, pt 3",
+                                          "methanol => methane",
+                                          "trimethylamine => dimethylamine",
+                                          "dimethylamine => monomethylamine",
+                                          "monomethylamine => ammonia",
+                                          "putative but not defining CO2 => methane",
+                                          "methane => methanol, with oxygen (pmo)",
+                                          "methane => methanol, with oxygen (mmo)",
+                                          
+                                          #SCFA and alcohol conversions
+                                          "pyruvate => acetyl CoA v1",
+                                          "pyruvate => acetyl CoA v2",
+                                          "pyruvate => acetylCoA f+ formate v3",
+                                          "acetate, pt 1",
+                                          "acetate, pt 2",
+                                          "acetate, pt 3",
+                                          "lactate L",
+                                          "lactate D",
+                                          "Butyrate, pt 1",
+                                          "Butyrate, pt 2",
+                                          "Propionate, pt 1",
+                                          "Propionate, pt 2",
+                                          "Alcohol production"
+                                          ))
+```
+
+3. Generate a relative abundance heatmap with a single column that will be joined to the DRAM data afterwards.
+```{r}
+heatmap_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 14),
+                 axis.text.y = element_text(color = "black", size = 14),
+                 axis.title.x = element_text(color = "black", size = 16, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 38, vjust = 6),
+                 legend.title=element_text(size=32, vjust = 2), 
+                 legend.text=element_text(size=30),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 plot.title = element_text(size = 40, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+Starting_material_relative_abundance_heatmap <- Long_read_MAGs_sylph_percent_complete_gathered %>%
+                                                mutate_at(c('Relative_abundance'), ~na_if(., 0)) %>% #convert 0 to NA to facilitate visualization
+                                                filter(!is.na(Relative_abundance)) %>% #need to re add this filter for it to work
+                                                ggplot(aes(x= Kingdom, y = reorder(Family_genus_bin, Relative_abundance), fill= Relative_abundance)) +
+                                                geom_tile(aes()) + #use a dummy variable Kingdom to limit x entry to a single column
+                                                theme(axis.text.x=element_text(angle=0, hjust=1),
+                                                axis.title.y = element_text(color = "black", size = 24, vjust = 0),
+                                                legend.key.size = unit(2, 'cm'))+
+                                                scale_fill_viridis_c(name="Relative abundance (%)", 
+                                                                     na.value = "white", limits = c(0, 50)) + #set to max which is just above 80
+                                                labs(title = "",
+                                                x = "" , y = "MAG ID") +
+                                                heatmap_theme +
+                                                theme(axis.text.x = element_blank(),
+                                                      axis.text.y = element_markdown(size = 38, face = "bold"),
+                                                      axis.title.x = element_blank(),
+                                                      axis.title.y = element_text(color = "black", size = 44, vjust = 6, face = "bold"),
+                                                      strip.text.x = element_text(color = "black", size = 40, face = "bold"),
+                                                      legend.title=element_text(size=48, vjust = 2, face = "bold"), 
+                                                      legend.text=element_text(size=44, face = "bold"),
+                                                      plot.margin=unit(c(0, -2, 0, 0), "cm"))
+```
+
+4. Generate the nitrogen metabolism heat map and connect everything together.
+```{r}
+#recode the TRUE/FALSe data to presence absence
+Long_read_MAGs_sylph_true_false_gathered<-Long_read_MAGs_sylph_true_false_gathered %>% 
+                                           mutate(Presence_absence = as.factor(Presence_absence)) %>%
+                                           mutate(Presence_absence = recode(Presence_absence, 'TRUE' = "Present", 'FALSE' = "Absent"))
+
+Long_read_MAGs_sylph_nitrogen_metabolism_heatmap<- Long_read_MAGs_sylph_true_false_gathered %>%
+                                                    mutate_at(c('Relative_abundance'), ~na_if(., 0)) %>% #convert 0 to NA to facilitate visualization
+                                                    filter(!is.na(Relative_abundance)) %>%
+                                                    filter(group == "Nitrogen metabolism") %>%
+                                                    ggplot(aes(x=Pathway_name, y = reorder(Family_genus_bin, Relative_abundance),
+                                                               fill=Presence_absence))+
+                                                    geom_tile(aes())+
+                                                    facet_grid(~ group, 
+                                                             scales = "free", space = "free") +
+                                                    theme(axis.text.x=element_text(angle=90, hjust=1)) +
+                                                    scale_fill_manual(values = c("#CCFFFF", "#009933"))+ 
+                                                    labs(title = "", x = "", y = "", fill = "Function") +
+                                                    heatmap_theme +
+                                                    theme(plot.title = element_text(hjust = 0.7, vjust = -1), 
+                                                          legend.position = "right", legend.direction = "vertical",
+                                                          legend.key.height= unit(4, 'cm'), legend.key.width = unit(2,"cm"),
+                                                          legend.text = element_text(size = 38, face = "bold"),
+                                                          legend.title = element_text(size = 40, face = "bold"),
+                                                          strip.background = element_rect(colour = "grey"), 
+                                                          strip.text.y = element_blank(), 
+                                                          strip.text.x = element_text(color = "black", size = 44, face = "bold"),
+                                                          axis.text.x = element_markdown(size = 44, angle = 45, 
+                                                                                         color = "black", face = "bold"),
+                                                          axis.text.y = element_blank(),
+                                                          axis.ticks.y = element_blank(),
+                                                          plot.margin=unit(c(0, 0, 0, -2), "cm"))
+
+#Combine the heatmaps with the coverage data
+Long_read_MAGs_sylph_combined_plot <- Starting_material_relative_abundance_heatmap +
+                                      Long_read_MAGs_sylph_nitrogen_metabolism_heatmap +
+                                      plot_layout(ncol = 2, nrow = 1, widths = c(0.1, 1), guides = "collect")
+
+Long_read_MAGs_sylph_combined_plot
+ggsave("Fig1_relative_abundance_and_nitrogen_metabolic_for_starting_consortium_PacBio_sequencing_heatmap_20250722.pdf", height=70, width=50, device="pdf", limitsize = FALSE)
+ggsave("Fig1_relative_abundance_and_nitrogen_metabolic_for_starting_consortium_PacBio_sequencing_heatmap_20250722.jpg", 
+       dpi = 300, height=70, width=50, device= "jpeg", limitsize = FALSE)
+```
+
+# Figure S1: Optical density and pH data for enrichment cultures grown along a redox gradient representative of WWTPs
+
+1. Load the require data analyses packages and the raw data file containing cell growth endpoints and nitrogen analyses.
+```{r}
+Culture_growth_data <- fread("FigS1_culture_growth_OD_pH_and_nitrogen_analyses_data.tsv", sep = "\t", header = "auto") %>%
+                       mutate(Replicate = as.factor(Replicate)) #make sure to convert replicate to a factor for shape coding down the line
+
+#Write the table to save the source data
+write.table(Culture_growth_data, file = "FigS1_culture_growth_OD_pH_and_nitrogen_analyses_data.tsv", sep = "\t", row.names = FALSE)
+```
+
+2. Generate individual figures for the OD and pH data and then combine them together.
+```{r}
+theme<- theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+        panel.background = element_blank(), axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(color = "grey20", 
+        size = 24, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+        axis.text.y = element_text(color = "grey20", 
+        size = 24, angle = 0, hjust = 1, vjust = 0, face = "plain"),  
+        axis.title.x = element_text(color = "grey20", 
+        size = 26, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+        axis.title.y = element_text(color = "grey20", 
+        size = 26, angle = 90, face = "plain"),
+        strip.text.x = element_text(size = 26, colour = "grey20"),
+        strip.text.y = element_text(size = 26, colour = "grey20"),
+        plot.title = element_text(size = 30, face = "bold", hjust = .5),
+        legend.title=element_text(size=28), 
+        legend.text=element_text(size=28),
+        panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+#create an ordered version of the metabolism that follows them down the redox ladder
+Culture_growth_data$Metabolism_ordered = factor(Culture_growth_data$Metabolism, 
+levels =c('Aerobic', 'Nitrate reduction', 'Iron reduction', 'Sulphate reduction'))
+
+
+OD_scatter_plot<-Culture_growth_data %>%
+                ggplot(aes(x=Days_elapsed, y = `OD 600`, color = `Abiotic vs biotic`, shape = Replicate)) +
+                geom_point(size = 4) +
+                geom_line(aes(group = `Bottle number`, color = `Abiotic vs biotic`), show.legend = FALSE)+
+                facet_grid(~ Metabolism_ordered) +
+                ylab("O.D. 600 nm") +
+                xlab("Days elapsed") + 
+                scale_color_brewer(name = "Abiotic vs biotic", palette = "Dark2") +
+                theme +
+                theme(legend.key = element_blank())
+
+OD_scatter_plot
+
+pH_scatter_plot<-Culture_growth_data %>%
+                ggplot(aes(x=Days_elapsed, y = `pH`, color = `Abiotic vs biotic`, shape = Replicate), show.legend = FALSE) +
+                geom_point(size = 4, show.legend = FALSE) +
+                geom_line(aes(group = `Bottle number`, color = `Abiotic vs biotic`), show.legend = FALSE)+
+                facet_grid(~ Metabolism_ordered) +
+                ylab("pH") +
+                xlab("Days elapsed") + 
+                scale_color_brewer(name = "Abiotic vs biotic", palette = "Dark2") +
+                theme +
+                theme(legend.key = element_blank())
+
+pH_scatter_plot
+
+Redox_scatter_plot<-Culture_growth_data %>%
+                ggplot(aes(x=Days_elapsed, y = `Redox`, color = `Abiotic vs biotic`, shape = Replicate)) +
+                geom_point(size = 4) +
+                geom_line(aes(group = `Bottle number`, color = `Abiotic vs biotic`), show.legend = FALSE)+
+                facet_grid(~ Metabolism_ordered) +
+                ylab("Redox potential (mV)") +
+                xlab("Days elapsed") + 
+                scale_color_brewer(name = "Abiotic vs biotic", palette = "Dark2") +
+                theme +
+                theme(legend.key = element_blank())
+
+Redox_scatter_plot
+
+#Combine the growth data
+Growth_data_scatter_plot <-  OD_scatter_plot + pH_scatter_plot + #Redox_scatter_plot +
+                             plot_layout(nrow = 2, heights = c(1,1)) +
+                             plot_annotation(title = "",
+                             theme = theme(plot.title = element_text(size = 30, hjust = 0.5, vjust = 0.5, face = "bold"))) +
+                             plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 36, face = "bold"))
+               
+Growth_data_scatter_plot
+ggsave("FigS1_OD_pH_data_from_enrichment_cultures_scatter_plot_20250722.pdf", height=12, width=24, device="pdf")
+ggsave("FigS1_OD_pH_data_from_enrichment_cultures_scatter_plot_20250722.jpg", height=12, width=24, device="jpeg")
+```
+
+
+# Figure 2: Nitrogen chemistry analyses
+
+1. Load in the data from your target directory.
+```{r}
+Nitrogen_cycling_data <- fread("Fig2_culture_growth_OD_pH_and_nitrogen_analyses_data.tsv", sep = "\t", header = "auto") %>% #same data as growth but keyed to figure 2
+                         mutate(Replicate = as.factor(Replicate)) #make sure to convert replicate to a factor for shape coding down the line
+
+#Write the table to save the source data
+write.table(Nitrogen_cycling_data, file = "Fig2_culture_growth_OD_pH_and_nitrogen_analyses_data.tsv", sep = "\t", row.names = FALSE)
+```
+
+2. Edit the data to remove day 18 and 0 values.
+```{r}
+Nitrogen_cycling_data_no_negatives<- Nitrogen_cycling_data %>% filter(!Days_elapsed == 18)
+
+#Remove negative values
+Nitrogen_cycling_data_no_negatives[Nitrogen_cycling_data_no_negatives < 0] <- 0
+```
+
+3. Generate dedicated plots for the 10-fold diluted NH3 and undiluted NO2 measurements conducted with colorimetric methods. Generate an additional plot for the 10-fold diluted NO3- analyses that were run with standard techniques by a certified lab.
+```{r}
+theme<- theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+        panel.background = element_blank(), axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(color = "grey20", 
+        size = 24, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+        axis.text.y = element_text(color = "grey20", 
+        size = 24, angle = 0, hjust = 1, vjust = 0, face = "plain"),  
+        axis.title.x = element_text(color = "grey20", 
+        size = 26, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+        axis.title.y = element_text(color = "grey20", 
+        size = 26, angle = 90, face = "plain"),
+        strip.text.x = element_text(size = 26, colour = "grey20"),
+        strip.text.y = element_text(size = 26, colour = "grey20"),
+        plot.title = element_text(size = 30, face = "bold", hjust = .5),
+        legend.title=element_text(size=28), 
+        legend.text=element_text(size=28),
+        panel.border = element_rect(colour = "black", fill=NA, size=1))
+
+#Create a custom order to the facets
+Nitrogen_cycling_data_no_negatives$Metabolism_ordered = factor(Nitrogen_cycling_data_no_negatives$Metabolism, 
+                                                        levels =c('Aerobic', 'Nitrate reduction', 'Iron reduction', 'Sulphate reduction'))
+
+#Generate 10-fold diluted NH3 plot
+NH3_10X_scatter_plot<- Nitrogen_cycling_data_no_negatives %>%
+                       ggplot(aes(x=Days_elapsed, y = `10X NH3 concentration mM Carleton`, 
+                                  color = `Abiotic vs biotic`, shape = Replicate)) +
+                       geom_point(size = 4) +
+                       geom_line(aes(group = `Bottle number`, color = `Abiotic vs biotic`))+
+                       facet_grid(~ Metabolism_ordered) +
+                       ylab("NH3 concentration (mM)") +
+                       xlab("Days elapsed") + 
+                       scale_color_brewer(name = "Abiotic vs biotic", palette = "Dark2") +
+                       theme +
+                       theme(legend.position="none")
+
+NH3_10X_scatter_plot
+
+#Generate undiluted NO2 plot
+NO2_1X_scatter_plot<- Nitrogen_cycling_data_no_negatives %>%
+                      ggplot(aes(x=Days_elapsed, y = `1X NO2 concentration mM Carleton`, 
+                                 color = `Abiotic vs biotic`, shape = Replicate)) +
+                      geom_point(size = 4) +
+                      geom_line(aes(group = `Bottle number`, color = `Abiotic vs biotic`))+
+                      facet_grid(~ Metabolism_ordered) +
+                      labs(x = xlab("Days elapsed"), y = ylab("NO2- concentration (mM)")) +
+                      scale_color_brewer(name = "Abiotic vs biotic", palette = "Dark2") +
+                      theme +
+                      theme(legend.key=element_blank())
+
+NO2_1X_scatter_plot
+
+#Generaye 10-fold diluted NO3 plot
+NO3_10X_scatter_plot <- Nitrogen_cycling_data_no_negatives %>%
+                        drop_na(`10X NO3 concentration mM BV`) %>%
+                        ggplot(aes(x=Days_elapsed, y = `10X NO3 concentration mM BV`, 
+                                   color = `Abiotic vs biotic`, shape = Replicate)) +
+                        geom_point(size = 4) +
+                        geom_line(aes(group = `Bottle number`, color = `Abiotic vs biotic`))+
+                        facet_grid(~ Metabolism_ordered) +
+                        labs(x = xlab("Days elapsed"), y = ylab("NO3- concentration (mM)")) +
+                        scale_color_brewer(name = "Abiotic vs biotic", palette = "Dark2") +
+                        theme +
+                        theme(legend.position="none")
+
+
+NO3_10X_scatter_plot
+
+Final_nitrogen_plot <- NH3_10X_scatter_plot +
+                       NO2_1X_scatter_plot +
+                       NO3_10X_scatter_plot +
+                       plot_layout(nrow = 3, heights = c(1,1)) +
+                       plot_annotation(title = "",
+                       theme = theme(plot.title = element_text(size = 30, hjust = 0.5, vjust = 0.5, face = "bold"))) +
+                       plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 36, face = "bold"))
+
+Final_nitrogen_plot
+ggsave("Fig2_nitrogen_chemical_analyses_scatter_plot_20250722.pdf", height=20, width=24, device="pdf")
+ggsave("Fig2_nitrogen_chemical_analyses_scatter_plot_20250722.jpg", dpi = 300, height=20, width=24, device="jpeg")
+```
+
+# Figure 3: Beta diversity analyses using non-metric multidimensional scaling for metagenomic DNA sequences obtained from enrichment culture samples
+
+## Figure 3 panel A MAG-level ordination
+
+1. Load the required packages and raw data. Manipulate it so it is in the proper format to generate a dissimilarity matrix.
+```{r}
+Full_dereplicated_MAG_abundance_DNA <- fread("Fig3_enrichment_culture_MAG_relative_abundance_data.tsv", sep = "\t", header = "auto")
+
+#Write the table to save the source data
+write.table(Full_dereplicated_MAG_abundance_DNA , file = "Fig3_enrichment_culture_MAG_relative_abundance_data.tsv", sep = "\t", row.names = FALSE)
+
+#Need to join this so there is taxonomy data associated because it is already in a matrix shape
+#Pivot table so that the sample names are in the row names and we can pull that metadata out afterwards
+
+Full_dereplicated_MAG_abundance_DNA_longer <- Full_dereplicated_MAG_abundance_DNA %>%
+                                              pivot_longer(cols = !genome,
+                                                           names_to = "Sample",
+                                                           values_to = "Relative_abundance")
+
+Full_dereplicated_MAG_abundance_DNA_wider <- Full_dereplicated_MAG_abundance_DNA_longer %>%
+                                             pivot_wider(names_from = "genome",
+                                                         values_from = "Relative_abundance") %>%
+                                             as.data.frame()
+                                              
+
+rownames(Full_dereplicated_MAG_abundance_DNA_wider) <- Full_dereplicated_MAG_abundance_DNA_wider$Sample #move sample variable to rowname
+
+Full_dereplicated_MAG_abundance_DNA_wider_no_sample <- Full_dereplicated_MAG_abundance_DNA_wider %>%
+                                                       dplyr::select(-Sample) %>%
+                                                       as.data.frame() #need to make sure this is a data frame tibbles don't support row name
+```
+
+2. Generate the dissimilarity matrix and the figure, making sure to take note of the raw values output by the stress test for the figure legend.
+```{r}
+#Generate matrix with bray-curtis dissimilarity index
+Full_dereplicated_MAG_abundance_DNA_wider_no_sample <- as.matrix(Full_dereplicated_MAG_abundance_DNA_wider_no_sample)
+Full_dereplicated_MAG_abundance_DNA_wider_matrix <- vegdist(Full_dereplicated_MAG_abundance_DNA_wider_no_sample, method = "bray") 
+
+#Generate the NMDS analysis setting the seed to 123 for consistency between runs
+set.seed(123)
+Full_dereplicated_MAG_NMDS <- metaMDS(Full_dereplicated_MAG_abundance_DNA_wider_matrix)
+
+
+#Extract scores and convert it to a tibble that can be manipulated in ggplot2
+Full_dereplicated_MAG_scores <- scores(Full_dereplicated_MAG_NMDS) %>%
+                                as_tibble(rownames = "Sample")
+
+#Parse categorical variables out from the sample names
+Full_derpelicates_MAG_scores_categorical_variables <- Full_dereplicated_MAG_scores %>%
+                                                      mutate(Time_point = case_when(
+                                                      grepl("Day0", Full_dereplicated_MAG_scores$Sample) ~ "Week 0",
+                                                      grepl("Week4", Full_dereplicated_MAG_scores$Sample) ~ "Week 4",
+                                                      grepl("Week8", Full_dereplicated_MAG_scores$Sample) ~ "Week 8")) %>%
+                                                      # Add metabolic treatment variable
+                                                      mutate(Metabolic_treatment = case_when(
+                                                      grepl("Day0", Full_dereplicated_MAG_scores$Sample) ~ "Inoculum",
+                                                      grepl("Aerobic", Full_dereplicated_MAG_scores$Sample) ~ "Aerobic",
+                                                      grepl("Ironreduction", Full_dereplicated_MAG_scores$Sample) ~ "Iron reduction",
+                                                      grepl("Nitratereduction",Full_dereplicated_MAG_scores$Sample) ~ "Nitrate reduction",
+                                                      grepl("Sulphatereduction", Full_dereplicated_MAG_scores$Sample) ~ 
+                                                           "Sulphate reduction")) %>%
+                                                      #Add replicate number variable
+                                                      mutate(Replicate_number = case_when(
+                                                      grepl("rep1", Full_dereplicated_MAG_scores$Sample) ~ "1",
+                                                      grepl("rep2", Full_dereplicated_MAG_scores$Sample) ~ "2",
+                                                      grepl("rep3", Full_dereplicated_MAG_scores$Sample) ~ "3")) %>%
+                                                      relocate(c(`Time_point`: `Replicate_number`), .after=Sample)
+
+#Generate the plot
+
+Full_dereplicated_MAG_ordination <-  ggplot(Full_derpelicates_MAG_scores_categorical_variables, aes(x = NMDS1, y = NMDS2)) + 
+                                     geom_point(aes(colour = Metabolic_treatment, shape = Time_point), size = 8, alpha = 0.7)+ 
+                                     theme(axis.text.y = element_text(colour = "black", size = 12, face = "bold"), 
+                                     axis.text.x = element_text(colour = "black", face = "bold", size = 12), 
+                                     legend.text = element_text(size = 12, face ="bold", colour ="black"), 
+                                     legend.position = "right", axis.title.y = element_text(face = "bold", size = 14), 
+                                     axis.title.x = element_text(face = "bold", size = 14, colour = "black"), 
+                                     legend.title = element_text(size = 14, colour = "black", face = "bold"), 
+                                     panel.background = element_blank(), panel.border = element_rect(colour = "black", fill = NA, size = 1.2),
+                                     legend.key=element_blank()) + 
+                                     labs(x = "NMDS1", y = "NMDS2", title = "")
+
+Full_dereplicated_MAG_ordination <- Full_dereplicated_MAG_ordination + 
+                                    guides(colour = guide_legend(title ="Metabolic treatment")) + 
+                                    guides(shape = guide_legend(title ="Time point"))
+ 
+Full_dereplicated_MAG_ordination
+ggsave("Fig3A_dereplicated_MAG_enrichment_cultures_time_series_NMDS_ordination_20250722.pdf", height=6, width=8, device="pdf", limitsize = FALSE)
+```
+## Figure 3 panel B and C DNA and RNA read level ordinations
+
+1. Load the R data (saved this way to preserve matrix formatting and reduce size of files). *Note* this R data file has already carried out the cleaning steps indicated in the *Appendix I* for preparing SQM directories.
+```{r}
+#Load the corresponding metadata file
+SqueezeCoassembly_DNA_read_metadata <- fread("Fig3B_SqueezeCoassembly_DNA_read_metadata.tsv", sep = "\t", header = "auto")
+
+#Load the R data that has been cleaned
+load("Fig3B_DNA_reads_NMDS_ordination.RData") #this will automatically import the R matrix name
+
+set.seed(123)
+SqueezeCoassembly_DNA_MDS = metaMDS(SqueezeCoassembly_DNA_KEGG_tpm_tranposed)
+
+# Get site scores (sample coordinates) from the MDS object
+SqueezeCoassembly_DNA_MDS_coords <- as.data.frame(scores(SqueezeCoassembly_DNA_MDS, display = "sites"))
+SqueezeCoassembly_DNA_MDS_coords$Sample_ID <- rownames(SqueezeCoassembly_DNA_MDS_coords)
+
+SqueezeCoassembly_DNA_plot_data <- left_join(SqueezeCoassembly_DNA_MDS_coords, SqueezeCoassembly_DNA_read_metadata, by = "Sample_ID")
+
+SqueezeCoassembly_DNA_read_NMDS <- SqueezeCoassembly_DNA_plot_data %>% 
+                 ggplot(aes(x = NMDS1, y = NMDS2, color = Metabolic_treatment)) +
+                 geom_point(aes(colour = Metabolic_treatment, shape = Time_point), size = 8, alpha = 0.7) +
+                 labs(title = "Squeeze Coassembly DNA reads mapped to unique KEGG IDs",
+                      x = "NMDS1", y = "NMDS2",
+                      shape = "Time point",
+                      color = "Metabolic Treatment") +
+                 theme(axis.text.y = element_text(colour = "black", size = 12, face = "bold"), 
+                       axis.text.x = element_text(colour = "black", face = "bold", size = 12), 
+                       legend.text = element_text(size = 12, face ="bold", colour ="black"), 
+                       legend.position = "right", 
+                       axis.title.y = element_text(face = "bold", size = 14), 
+                       axis.title.x = element_text(face = "bold", size = 14, colour = "black"),
+                       plot.title = element_blank(),
+                       legend.title = element_text(size = 14, colour = "black", face = "bold"), 
+                       panel.background = element_blank(), 
+                       panel.border = element_rect(colour = "black", fill = NA, size = 1.2),
+                       legend.key=element_blank())
+
+SqueezeCoassembly_DNA_read_NMDS
+ggsave("Fig3B_SqueezeCoassembly_DNA_reads_NMDS_ordination_20250722.pdf", height=6, width=8, device="pdf", limitsize = FALSE)
+```
+
+2. Repeat the steps above for the RNA data. See *Appendix I* for how these Rdata files were generated.
+```{r}
+#Load the corresponding metadata file
+SqueezeCoassembly_RNA_read_metadata <- fread("Fig3C_SqueezeCoassembly_RNA_read_metadata.tsv", sep = "\t", header = "auto")
+
+# Load the R data that has been cleaned
+load("Fig3C_RNA_reads_NMDS_ordination.RData") #this will automatically important the R matrix name
+
+set.seed(123)
+SqueezeCoassembly_RNA_MDS = metaMDS(SqueezeCoassembly_RNA_KEGG_tpm_tranposed)
+
+# Get site scores (sample coordinates) from the MDS object
+SqueezeCoassembly_RNA_MDS_coords <- as.data.frame(scores(SqueezeCoassembly_RNA_MDS, display = "sites"))
+SqueezeCoassembly_RNA_MDS_coords$Sample_ID <- rownames(SqueezeCoassembly_RNA_MDS_coords)
+
+SqueezeCoassembly_RNA_plot_data <- left_join(SqueezeCoassembly_RNA_MDS_coords, SqueezeCoassembly_RNA_read_metadata, by = "Sample_ID")
+
+SqueezeCoassembly_RNA_read_NMDS <- SqueezeCoassembly_RNA_plot_data %>% 
+                 ggplot(aes(x = NMDS1, y = NMDS2, color = Metabolic_treatment)) +
+                 geom_point(aes(colour = Metabolic_treatment, shape = Time_point), size = 8, alpha = 0.7) +
+                 labs(title = "Squeeze Coassembly RNA reads mapped to unique KEGG IDs",
+                      x = "NMDS1", y = "NMDS2",
+                      shape = "Time point",
+                      color = "Metabolic Treatment") +
+                 theme(axis.text.y = element_text(colour = "black", size = 12, face = "bold"), 
+                       axis.text.x = element_text(colour = "black", face = "bold", size = 12), 
+                       legend.text = element_text(size = 12, face ="bold", colour ="black"), 
+                       legend.position = "right", 
+                       axis.title.y = element_text(face = "bold", size = 14), 
+                       axis.title.x = element_text(face = "bold", size = 14, colour = "black"),
+                       plot.title = element_blank(),
+                       legend.title = element_text(size = 14, colour = "black", face = "bold"), 
+                       panel.background = element_blank(), 
+                       panel.border = element_rect(colour = "black", fill = NA, size = 1.2),
+                       legend.key=element_blank())
+
+SqueezeCoassembly_RNA_read_NMDS
+ggsave("Fig3C_SqueezeCoassembly_RNA_reads_NMDS_ordination_20250722.pdf", height=6, width=8, device="pdf", limitsize = FALSE)
+```
+
+## Figure 3 combine all panels
+
+1. Recreate versions of Fig 3A and 3B that do not have legends to facilitate collating.
+```{r}
+Full_dereplicated_MAG_ordination_no_legend <- Full_dereplicated_MAG_ordination + theme(legend.position = "none")
+
+SqueezeCoassembly_DNA_read_NMDS_no_legend <- SqueezeCoassembly_RNA_read_NMDS + theme(legend.position = "none")
+```
+
+2. Use the patchwork package to combine all three plots.
+```{r}
+Fig3_MAG_DNA_RNA_read_ordinations_combined <- Full_dereplicated_MAG_ordination_no_legend +
+                                              SqueezeCoassembly_DNA_read_NMDS_no_legend +
+                                              SqueezeCoassembly_RNA_read_NMDS +
+                                              plot_layout(guides = "collect") +
+                                              plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 20, face = "bold"))
+               
+Fig3_MAG_DNA_RNA_read_ordinations_combined
+ggsave("Fig3_MAG_DNA_RNA_read_NMDS_ordinations_combined_20250722.pdf", height=6, width=22, device="pdf")
+ggsave("Fig3_MAG_DNA_RNA_read_NMDS_ordinations_combined_20250722.jpg", dpi = 300, height=6, width=22, device="jpeg")
+```
+
+
+# Figure S2: Beta diversity analyses using non-metric multidimensional scaling for metagenomic DNA sequences obtained from enrichment culture samples omitting aerobic cultures
+
+1. Load the required packages and raw data. Manipulate it so it is in the proper format to generate a dissimilarity matrix.
+```{r}
+Full_dereplicated_MAG_abundance_DNA <- fread("FigS2_enrichment_culture_MAG_relative_abundance_no_aerobic_cultures_data.tsv", sep = "\t", header = "auto")
+
+#Write the table to save the source data
+write.table(Full_dereplicated_MAG_abundance_DNA , file = "FigS2_enrichment_culture_MAG_relative_abundance_no_aerobic_cultures_data.tsv", sep = "\t", row.names = FALSE)
+
+#Remove the aerobic cultures from the raw data
+Full_dereplicated_MAG_abundance_DNA_longer_no_aerobic <- Full_dereplicated_MAG_abundance_DNA %>%
+                                                         pivot_longer(cols = !genome,
+                                                                      names_to = "Sample",
+                                                                      values_to = "Relative_abundance") %>%
+                                                         filter(!grepl("Aerobic", Sample))
+
+Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic <- Full_dereplicated_MAG_abundance_DNA_longer_no_aerobic %>%
+                                                        pivot_wider(names_from = "genome",
+                                                                    values_from = "Relative_abundance") %>%
+                                                        as.data.frame()
+
+rownames(Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic) <- Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic$Sample
+
+Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic_no_sample <- Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic %>%
+                                                       select(-Sample) %>%
+                                                       as.data.frame() #need to make sure this is a data frame tibbles don't support row name
+```
+
+2. Generate the dissimilarity matrix and the figure, making sure to take note of the raw values output by the stress test for the figure legend.
+```{r}
+#Generate the dissimilarity matrix
+Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic_no_sample <- as.matrix(Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic_no_sample)
+Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic_matrix <- vegdist(Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic_no_sample, method = "bray") 
+
+#Generate the NMDS analysis setting the seed to 123 for consistency between runs
+set.seed(123)
+Full_dereplicated_MAG_no_aerobic_NMDS <- metaMDS(Full_dereplicated_MAG_abundance_DNA_wider_no_aerobic_matrix)
+
+
+#Extract scores and convert it to a tibble that can be manipulated in ggplot2
+Full_dereplicated_MAG_no_aerobic_scores <- scores(Full_dereplicated_MAG_no_aerobic_NMDS) %>%
+                                           as_tibble(rownames = "Sample")
+
+#Parse categorical variables out from the sample names
+Full_derpelicates_MAG_no_aerobic_scores_categorical_variables <- Full_dereplicated_MAG_no_aerobic_scores %>%
+                                                      mutate(Time_point = case_when(
+                                                      grepl("Day0", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "Week 0",
+                                                      grepl("Week4", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "Week 4",
+                                                      grepl("Week8", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "Week 8")) %>%
+                                                      # Add metabolic treatment variable
+                                                      mutate(Metabolic_treatment = case_when(
+                                                      grepl("Day0", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "Inoculum",
+                                                      #grepl("Aerobic", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "Aerobic",
+                                                      grepl("Ironreduction", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "Iron reduction",
+                                                      grepl("Nitratereduction",Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "Nitrate reduction",
+                                                      grepl("Sulphatereduction", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ 
+                                                           "Sulphate reduction")) %>%
+                                                      #Add replicate number variable
+                                                      mutate(Replicate_number = case_when(
+                                                      grepl("rep1", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "1",
+                                                      grepl("rep2", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "2",
+                                                      grepl("rep3", Full_dereplicated_MAG_no_aerobic_scores$Sample) ~ "3")) %>%
+                                                      relocate(c(`Time_point`: `Replicate_number`), .after=Sample)
+
+#Generate the plot
+Full_dereplicated_MAG_no_aerobic_ordination <-  ggplot(Full_derpelicates_MAG_no_aerobic_scores_categorical_variables, aes(x = NMDS1, y = NMDS2)) + 
+                                                geom_point(aes(colour = Metabolic_treatment, shape = Time_point), size = 8, alpha = 0.7)+ 
+                                                theme(axis.text.y = element_text(colour = "black", size = 12, face = "bold"), 
+                                                axis.text.x = element_text(colour = "black", face = "bold", size = 12), 
+                                                legend.text = element_text(size = 12, face ="bold", colour ="black"), 
+                                                legend.position = "right", axis.title.y = element_text(face = "bold", size = 14), 
+                                                axis.title.x = element_text(face = "bold", size = 14, colour = "black"), 
+                                                legend.title = element_text(size = 14, colour = "black", face = "bold"), 
+                                                panel.background = element_blank(), panel.border = element_rect(colour = "black", fill = NA, size = 1.2),
+                                                legend.key=element_blank()) + 
+                                                labs(x = "NMDS1", y = "NMDS2", title = "")
+
+Full_dereplicated_MAG_no_aerobic_ordination <- Full_dereplicated_MAG_no_aerobic_ordination + 
+                                    guides(colour = guide_legend(title ="Metabolic treatment")) + 
+                                    guides(shape = guide_legend(title ="Time point"))
+ 
+Full_dereplicated_MAG_no_aerobic_ordination
+
+ggsave("FigS2_dereplicated_MAG_enrichment_cultures_time_series_aerobic_cultures_omitted_NMDS_ordination_20250722.pdf", 
+       height=6, width=8, device="pdf", limitsize = FALSE)
+
+ggsave("FigS2_dereplicated_MAG_enrichment_cultures_time_series_aerobic_cultures_omitted_NMDS_ordination_20250722.jpg", 
+       dpi = 300, height=6, width=8, device="jpeg", limitsize = FALSE)
+```
+
+# Figure S3: % RNA mapping to nitrogen cycling genes in coassembly data
+
+1. Load the .Rdata containing the formatted ggplot object to recreate the plot. Exporting the full dataframe was not possible while preserving the subsetting function in SQMTools to retrieve specific KEGG IDs. See *Appendix I* for how the .Rdata file was generate from the original SQM project.
+
+```{r}
+load("FigS3A_Nitrogen_genes_RNA_functions_percent.RData") #this will automatically import the R object name
+load("FigS3B_Nitrogen_genes_RNA_functions_tpm.RData")
+load("FigS3C_Nitrogen_genes_RNA_functions_no_week0_percent.RData") #this will automatically import the R object name
+load("FigS3D_Nitrogen_genes_RNA_functions_no_week0_tpm.RData") 
+```
+
+2. Plot the heatmap for the full data reported in percentage.
+```{r}
+barplot_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 28),
+                 axis.text.y = element_text(color = "black", size = 28),
+                 axis.title.x = element_text(color = "black", size = 32, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 32, vjust = 6),
+                 strip.text.x = element_text(color = "black", size = 30, face = "bold"),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=34),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 legend.key.size = unit (3, "cm"),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+Nitrogen_genes_RNA_functions_formatted <-Nitrogen_genes_RNA_functions + 
+                                         facet_nested(~Metabolic_treatment_ordered + Time_point, scales = "free_x", space = "free") + 
+                                         scale_x_discrete(labels = c("Nitrifying_Day0_rep1_RNA" = "1",
+                                                                     "Nitrifying_Day0_rep2_RNA" = "2",
+                                                                     "Nitrifying_Day0_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Ironreduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Ironreduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep1_RNA" ="1",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep3_RNA" = "3")) + 
+                                                                      barplot_theme +
+                                                                      theme(axis.text.x = element_text(angle = 0),
+                                                                            strip.text.x = element_text(color = "black", size = 24, face = "bold")) +
+                                                                      labs(x = xlab("Replicate"), y = ylab("KEGG IDs")) +
+                                                                      scale_fill_viridis_c()
+
+Nitrogen_genes_RNA_functions_formatted
+ggsave("FigS3A_Nitrogen_cycling_genes_RNA_reads_coassembly_percent_20250722.pdf", height=16, width=40, device="pdf", limitsize = FALSE)
+```
+
+3. Plot the heatmap for the full data reported in tpm.
+```{r}
+barplot_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 28),
+                 axis.text.y = element_text(color = "black", size = 28),
+                 axis.title.x = element_text(color = "black", size = 32, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 32, vjust = 6),
+                 strip.text.x = element_text(color = "black", size = 30, face = "bold"),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=34),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 legend.key.size = unit (3, "cm"),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+Nitrogen_genes_RNA_functions_formatted_tpm <-Nitrogen_genes_RNA_functions_coassembly_tpm + 
+                                         facet_nested(~Metabolic_treatment_ordered + Time_point, scales = "free_x", space = "free") + 
+                                         scale_x_discrete(labels = c("Nitrifying_Day0_rep1_RNA" = "1",
+                                                                     "Nitrifying_Day0_rep2_RNA" = "2",
+                                                                     "Nitrifying_Day0_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Ironreduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Ironreduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep1_RNA" ="1",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep3_RNA" = "3")) + 
+                                                                      barplot_theme +
+                                                                      theme(axis.text.x = element_text(angle = 0),
+                                                                            strip.text.x = element_text(color = "black", size = 24, face = "bold")) +
+                                                                      labs(x = xlab("Replicate"), y = ylab("KEGG IDs")) +
+                                                                      scale_fill_viridis_c()
+
+
+Nitrogen_genes_RNA_functions_formatted_tpm
+ggsave("FigS3B_Nitrogen_cycling_genes_RNA_reads_coassembly_tpm_20250722.pdf", height=16, width=40, device="pdf", limitsize = FALSE)
+```
+4. Plot the heatmap for the data omitting week 0 reported in percentage.
+```{r}
+barplot_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 28),
+                 axis.text.y = element_text(color = "black", size = 28),
+                 axis.title.x = element_text(color = "black", size = 32, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 32, vjust = 6),
+                 strip.text.x = element_text(color = "black", size = 30, face = "bold"),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=34),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 legend.key.size = unit (3, "cm"),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+Nitrogen_genes_RNA_functions_no_week0 <- Nitrogen_genes_RNA_functions_no_week0_coassembly + 
+                                         facet_nested(~Metabolic_treatment_ordered + Time_point, scales = "free_x", space = "free") + 
+                                         scale_x_discrete(labels = c("Nitrifying_Day0_rep1_RNA" = "1",
+                                                                     "Nitrifying_Day0_rep2_RNA" = "2",
+                                                                     "Nitrifying_Day0_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Ironreduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Ironreduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep1_RNA" ="1",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep3_RNA" = "3")) + 
+                                                                      barplot_theme +
+                                                                      theme(axis.text.x = element_text(angle = 0),
+                                                                            strip.text.x = element_text(color = "black", size = 24, face = "bold")) +
+                                                                      labs(x = xlab("Replicate"), y = ylab("KEGG IDs")) +
+                                                                      scale_fill_viridis_c()
+
+
+Nitrogen_genes_RNA_functions_no_week0
+ggsave("FigS3C_Nitrogen_cycling_genes_RNA_reads_no_week0_coassembly_percent_20250722.pdf", height=16, width=40, device="pdf", limitsize = FALSE)
+```
+
+5. Plot the heatmap for the data omitting week 0 reported in tpm.
+```{r}
+barplot_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 28),
+                 axis.text.y = element_text(color = "black", size = 28),
+                 axis.title.x = element_text(color = "black", size = 32, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 32, vjust = 6),
+                 strip.text.x = element_text(color = "black", size = 30, face = "bold"),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=34),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 legend.key.size = unit (3, "cm"),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+Nitrogen_genes_RNA_functions_no_week0_tpm <- Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm + 
+                                         facet_nested(~Metabolic_treatment_ordered + Time_point, scales = "free_x", space = "free") + 
+                                         scale_x_discrete(labels = c("Nitrifying_Day0_rep1_RNA" = "1",
+                                                                     "Nitrifying_Day0_rep2_RNA" = "2",
+                                                                     "Nitrifying_Day0_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Ironreduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Ironreduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep1_RNA" ="1",
+                                                                     "Nitrifying_Week4_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week4_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Aerobic_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Aerobic_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Ironreduction_rep3_RNA" = "3",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Nitratereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep1_RNA" = "1",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep2_RNA" = "2",
+                                                                     "Nitrifying_Week8_Sulphatereduction_rep3_RNA" = "3")) + 
+                                                                      barplot_theme +
+                                                                      theme(axis.text.x = element_text(angle = 0),
+                                                                            strip.text.x = element_text(color = "black", size = 24, face = "bold")) +
+                                                                      labs(x = xlab("Replicate"), y = ylab("KEGG IDs")) +
+                                                                      scale_fill_viridis_c()
+
+
+Nitrogen_genes_RNA_functions_no_week0_tpm
+ggsave("FigS3D_Nitrogen_cycling_genes_RNA_reads_no_week0_coassembly_tpm_20250722.pdf", height=16, width=40, device="pdf", limitsize = FALSE)
+```
+
+6. Combine all four plots together.
+```{r}
+FigS3_RNA_mapped_nitrogen_genes_combined <- Nitrogen_genes_RNA_functions_formatted +
+                                            Nitrogen_genes_RNA_functions_formatted_tpm +
+                                            Nitrogen_genes_RNA_functions_no_week0 +
+                                            Nitrogen_genes_RNA_functions_no_week0_tpm +
+                                            plot_layout(ncol = 1) +
+                                            plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 48, face = "bold"))
+               
+FigS3_RNA_mapped_nitrogen_genes_combined
+ggsave("FigS3_RNA_mapped_nitrogen_genes_coassembly_combined_20250722.pdf", height=48, width=48, device="pdf")
+ggsave("FigS3_RNA_mapped_nitrogen_genes_coassembly_combined_20250722.jpg", dpi = 300, height=48, width=48, device="jpeg")
+```
+
+# Figure S4: Percent of RNA reads mapped to genome bins obtained from the incubation time series
+
+1. Load the .Rdata file that contains the ggplot object required to reproduce this figure. See *Appendix I* for how this file was generated after loading in the SQM directory for the genomic bin data.
+```{r}
+load("FigS4_RNA_percent_bin_data.Rdata")
+```
+
+2. Edit the ggplot2 object directly to generate a reformatted plot.
+```{r}
+barplot_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 28),
+                 axis.text.y = element_text(color = "black", size = 28),
+                 axis.title.x = element_text(color = "black", size = 32, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 32, vjust = 6),
+                 strip.text.x = element_text(color = "black", size = 30, face = "bold"),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=34),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+RNA_bin_plot_formatted <-RNA_bin_plot + 
+                         facet_nested(~Metabolic_treatment_ordered + Time_point, scales = "free_x", space = "free") + 
+                         scale_x_discrete(labels = c("Nitrifying_Day0_rep1_RNA" = "1",
+                                                     "Nitrifying_Day0_rep2_RNA" = "2",
+                                                     "Nitrifying_Day0_rep3_RNA" = "3",
+                                                     "Nitrifying_Week4_Aerobic_rep1_RNA" = "1",
+                                                     "Nitrifying_Week4_Aerobic_rep2_RNA" = "2",
+                                                     "Nitrifying_Week4_Aerobic_rep3_RNA" = "3",
+                                                     "Nitrifying_Week4_Ironreduction_rep1_RNA" = "1",
+                                                     "Nitrifying_Week4_Ironreduction_rep2_RNA" = "2",
+                                                     "Nitrifying_Week4_Ironreduction_rep3_RNA" = "3",
+                                                     "Nitrifying_Week4_Nitratereduction_rep1_RNA" ="1",
+                                                     "Nitrifying_Week4_Nitratereduction_rep2_RNA" = "2",
+                                                     "Nitrifying_Week4_Sulphatereduction_rep1_RNA" = "1",
+                                                     "Nitrifying_Week4_Sulphatereduction_rep2_RNA" = "2",
+                                                     "Nitrifying_Week8_Aerobic_rep1_RNA" = "1",
+                                                     "Nitrifying_Week8_Aerobic_rep2_RNA" = "2",
+                                                     "Nitrifying_Week8_Aerobic_rep3_RNA" = "3",
+                                                     "Nitrifying_Week8_Ironreduction_rep3_RNA" = "3",
+                                                     "Nitrifying_Week8_Nitratereduction_rep1_RNA" = "1",
+                                                     "Nitrifying_Week8_Nitratereduction_rep2_RNA" = "2",
+                                                     "Nitrifying_Week8_Sulphatereduction_rep1_RNA" = "1",
+                                                     "Nitrifying_Week8_Sulphatereduction_rep2_RNA" = "2",
+                                                     "Nitrifying_Week8_Sulphatereduction_rep3_RNA" = "3")) + 
+                                                      barplot_theme +
+                                                      theme(axis.text.x = element_text(angle = 0),
+                                                            strip.text.x = element_text(color = "black", size = 24, face = "bold")) +
+                                                     labs(x = xlab("Replicate"), y = ylab("RNA reads mapped (%)"))
+
+RNA_bin_plot_formatted
+ggsave("FigS4_RNA_mapping_to_bins_reformatted_stacked_barplot_20250722.pdf", height=20, width=40, device="pdf", limitsize = FALSE)
+ggsave("FigS4_RNA_mapping_to_bins_reformatted_stacked_barplot_20250722.jpg", dpi = 300, height=20, width=40, device="jpeg", limitsize = FALSE)
+```
+
+# Figure 4: Relative abundance and nitrogen metabolism for MAGs >= 1% from enrichment cultures grown along a redox gradient
+
+1. Load in the data and required packages from your target directory. 
+```{r}
+Full_dereplicated_time_series_data_formatted_grouping_variables <- fread("Fig4_relative_abundance_and_nitrogen_metabolism_for_Illumina_MAGs_enrichment_cultures_data.tsv", sep = "\t", header = "auto") %>%
+mutate(Replicate_number = as.factor(Replicate_number)) #make sure to convert to a factor for heat maps
+                                                                    
+#Write the table to save the source data
+write.table(Full_dereplicated_time_series_data_formatted_grouping_variables, 
+            file = "Fig4_relative_abundance_and_nitrogen_metabolism_for_Illumina_MAGs_enrichment_cultures_data.tsv", 
+            sep = "\t", row.names = FALSE)
+```
+
+2. Make the data into a long format to recreate the DRAM output figures.
+```{r}
+Full_dereplicated_time_series_percent_complete_gathered <- Full_dereplicated_time_series_data_formatted_grouping_variables %>% 
+                                                           gather(key = Pathway_name, value = Percent_complete, 
+                                                           "3-Hydroxypropionate bi-cycle":"Complex V: V/A-type ATPase, prokaryotes", na.rm=FALSE) %>%
+                                                           select(-c("CAZy: Alpha-galactans": "Sulfur metabolism: thiosulfate => sulfite")) %>% 
+                                                           mutate(group = case_when(grepl("\\:.*", Pathway_name) ~ 
+                                                           sub("\\:.*", "", Pathway_name),
+                                                           !grepl("\\:.*", Pathway_name) ~ "Module")) %>% #maintained up to this step
+                                                           mutate(Pathway_name = gsub("Complex I*:","",Pathway_name)) %>%
+                                                           mutate(Pathway_name = gsub("Complex IV*.*:","",Pathway_name)) %>%
+                                                           mutate(Pathway_name = gsub("Complex V*.*:","",Pathway_name))
+
+#80704 observations for 20 variables
+
+Full_dereplicated_time_series_true_false_gathered <- Full_dereplicated_time_series_data_formatted_grouping_variables %>%
+                                                     gather(Pathway_name, Presence_absence,
+                                                     "CAZy: Alpha-galactans":"Sulfur metabolism: thiosulfate => sulfite", na.rm = FALSE) %>%
+                                                     select(-c("3-Hydroxypropionate bi-cycle":"Complex V: V/A-type ATPase, prokaryotes")) %>%
+                                                     mutate(group = case_when(grepl("\\:.*", Pathway_name) ~ 
+                                                     sub("\\:.*", "", Pathway_name))) %>%
+                                                     mutate(Pathway_name = gsub(".*:","",Pathway_name))
+
+#166452 observations for 20 variables
+
+#Clean up and reorder
+Full_dereplicated_time_series_percent_complete_gathered$Pathway_name<-trimws(
+                                                                                Full_dereplicated_time_series_percent_complete_gathered$Pathway_name, 
+                                                                                which = c("left")) 
+
+Full_dereplicated_time_series_percent_complete_gathered$Pathway_name = factor(
+                                          Full_dereplicated_time_series_percent_complete_gathered$Pathway_name, 
+                                          levels =c(
+                                            
+                                          #Module facet
+                                            
+                                          "Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate", 
+                                          "Pentose phosphate pathway (Pentose phosphate cycle)",
+                                          "Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate",
+                                          "Citrate cycle (TCA cycle, Krebs cycle)",
+                                          "Glyoxylate cycle",
+                                          "Reductive pentose phosphate cycle (Calvin cycle)",
+                                          "Reductive citrate cycle (Arnon-Buchanan cycle)",
+                                          "Dicarboxylate-hydroxybutyrate cycle",
+                                          "Hydroxypropionate-hydroxybutylate cycle",
+                                          "3-Hydroxypropionate bi-cycle",
+                                          "Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)",
+                                          "Acetyl-CoA pathway, CO2 => acetyl-CoA",
+                                          "Methanogenesis, CO2 => methane",
+                                          
+                                          #Complex I
+                                          
+                                          "NADH:quinone oxidoreductase, prokaryotes",
+                                          "NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria",
+                                          "NADH dehydrogenase (ubiquinone) 1 alpha subcomplex",
+                                          
+                                          #Complex II
+                                          
+                                          "Succinate dehydrogenase (ubiquinone)",
+                                          "Succinate dehydrogenase, prokaryotes",
+                                          "Fumarate reductase, prokaryotes",
+                                          
+                                          #Complex III
+                                          
+                                          "Cytochrome bc1 complex respiratory unit", #what's the difference between first and second?
+                                          "Cytochrome bc1 complex",
+                                          "Cytochrome bd ubiquinol oxidase",
+                                          
+                                          #Complex IV high affinity
+                                          
+                                          #"Cytochrome bd ubiquinol oxidase", This level is being duplicated, but may not be an issue
+                                          "Cytochrome c oxidase, cbb3-type",
+                                          
+                                          #Complex IV low affinity
+                                          
+                                          "Cytochrome c oxidase",
+                                          "Cytochrome c oxidase, prokaryotes",
+                                          "Cytochrome aa3-600 menaquinol oxidase",
+                                          "Cytochrome o ubiquinol oxidase",
+                                          
+                                          #Complex V
+                                          "F-type ATPase, prokaryotes and chloroplasts",
+                                          "F-type ATPase, eukaryotes",
+                                          "V/A-type ATPase, prokaryotes",
+                                          "V-type ATPase, eukaryotes"
+                                          ))
+
+#Categorical data script
+Full_dereplicated_time_series_true_false_gathered$Pathway_name<-trimws(Full_dereplicated_time_series_true_false_gathered$Pathway_name, which = c("left")) 
+
+Full_dereplicated_time_series_true_false_gathered$Pathway_name =
+                                          factor(Full_dereplicated_time_series_true_false_gathered$Pathway_name, 
+                                          levels =c(
+                                            
+                                          #CAZy facet
+                                            
+                                          "Polyphenolics", 
+                                          "Crystalline Cellulose",
+                                          "Amorphous Cellulose",
+                                          "Xyloglucan",
+                                          "Xylans",
+                                          "Alpha-mannan",
+                                          "Beta-mannan",
+                                          "Mixed-Linkage glucans",
+                                          "Starch",
+                                          "Pectin",
+                                          "Arabinan",
+                                          "Alpha-galactans",
+                                          "Beta-galactan (pectic galactan)",
+                                          "Chitin",
+                                          "Sulf-Polysachharides",
+                                          "Mucin",
+                                          "Fucose Cleavage",
+                                          "Arabinose cleavage",
+                                          "Rhamnose cleavage",
+                                          
+                                          #Nitrogen metabolism
+                                          
+                                          "ammonia => nitrite",
+                                          "Bacterial/Archaeal ammonia oxidation",
+                                          "Bacterial (aerobic-specific) ammonia oxidation",
+                                          "Bacterial (anaerobic-specific) ammonia oxidation",
+                                          "nitrite => nitrate",
+                                          "nitrate => nitrite",
+                                          "nitrite => nitric oxide",
+                                          "nitric oxide => nitrous oxide",
+                                          "nitrous oxide => nitrogen",
+                                          "nitrogen => ammonia",
+                                          "Dissimilatory nitrite reduction to ammonia (DNRA)",
+                                          "Nitrogen fixation alternative", #typo corrected higher up
+                                          
+                                          #Sulfur metabolism
+                                          "dissimilatory sulfate reduction (and oxidation) sulfate => sulfide",
+                                          "thiosulfate => sulfite",
+                                          "Thiosulfate oxidation by SOX complex, thiosulfate => sulfate",
+                                          "tetrathionate => thiosulfate",
+                                          
+                                          #Other reductases
+                                          
+                                          "selenate/Chlorate reduction",
+                                          "TMAO reductase",
+                                          "mercury reduction",
+                                          "arsenate reduction, pt 1",
+                                          "arsenate reduction, pt 2",
+                                          
+                                          #Photosynthesis
+                                          "Photosystem I",
+                                          "Photosystem II",
+                                          
+                                          #Methanogenesis and methanotrophy
+                                          
+                                          "Key functional gene",
+                                          "acetate => methane, pt 1",
+                                          "acetate => methane, pt 2",
+                                          "acetate => methane, pt 3",
+                                          "methanol => methane",
+                                          "trimethylamine => dimethylamine",
+                                          "dimethylamine => monomethylamine",
+                                          "monomethylamine => ammonia",
+                                          "putative but not defining CO2 => methane",
+                                          "methane => methanol, with oxygen (pmo)",
+                                          "methane => methanol, with oxygen (mmo)",
+                                          
+                                          #SCFA and alcohol conversions
+                                          "pyruvate => acetyl CoA v1",
+                                          "pyruvate => acetyl CoA v2",
+                                          "pyruvate => acetylCoA f+ formate v3",
+                                          "acetate, pt 1",
+                                          "acetate, pt 2",
+                                          "acetate, pt 3",
+                                          "lactate L",
+                                          "lactate D",
+                                          "Butyrate, pt 1",
+                                          "Butyrate, pt 2",
+                                          "Propionate, pt 1",
+                                          "Propionate, pt 2",
+                                          "Alcohol production"
+                                          ))
+```
+
+3. Generate a relative abundance heat map with a >= 1% relative abundance cutoff.
+```{r}
+#Generate aesthetic theme
+
+heatmap_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 14),
+                 axis.text.y = element_text(color = "black", size = 14),
+                 axis.title.x = element_text(color = "black", size = 16, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 16, vjust = 6),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=38),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 4), "cm"))
+
+#Create custom order for the grouping variables
+Full_dereplicated_time_series_percent_complete_gathered$Time_point = factor(Full_dereplicated_time_series_percent_complete_gathered$Time_point, levels =c("Week 0", "Week 4", "Week 8"))
+                                                                        
+Full_dereplicated_time_series_percent_complete_gathered$Metabolic_treatment = factor(
+Full_dereplicated_time_series_percent_complete_gathered$Metabolic_treatment, 
+levels =c("Inoculum",
+         "Aerobic",
+         "Nitrate reduction",
+         "Iron reduction",
+         "Sulphate reduction"))
+
+Full_dereplicated_time_series_abundance_heatmap_1_percent_cutoff <- Full_dereplicated_time_series_percent_complete_gathered %>%
+                                                                    filter(Relative_abundance >= 1) %>% #add this filter for a 1% cutoff
+                                               ggplot(aes(x= Replicate_number,
+                                               y = reorder(Family_genus_bin, Relative_abundance), fill= Relative_abundance)) +
+                                               geom_tile(aes()) + 
+                                               facet_nested(~Metabolic_treatment + Time_point, 
+                                               scales = "free", space = "free", labeller = labeller(group = label_wrap_gen(10))) +
+                                               theme(axis.text.x=element_text(angle=0, hjust=1),
+                                               axis.title.y = element_text(color = "black", size = 24, vjust = 0),
+                                               legend.key.size = unit(4, 'cm'))+
+                                               scale_fill_viridis_c(name="Relative abundance (%)", 
+                                                                    na.value = "white", limits = c(0, 70)) + #set to max which is just above 80
+                                               labs(title = "",
+                                               x = "Replicate" , y = "MAG ID") +
+                                               heatmap_theme +
+                                               theme(axis.text.x = element_text(color = "black", size = 60, face = "bold"),
+                                                     axis.text.y = element_markdown(size = 60, face = "bold"),
+                                                     axis.title.x = element_text(color = "black", size = 64, face = "bold"),
+                                                     axis.title.y = element_text(color = "black", size = 64, vjust = 6, face = "bold"),
+                                                     strip.text.x = element_text(color = "black", size = 64, face = "bold"),
+                                                     legend.title=element_text(size=64, vjust = 2, face = "bold"), 
+                                                     legend.text=element_text(size=62, face = "bold"),
+                                                     legend.margin = margin(60,60,60,60))
+
+Full_dereplicated_time_series_abundance_heatmap_1_percent_cutoff
+ggsave("Fig4_relative_abundance_MAG_enrichment_cultures_time_series_1percent_heatmap_20250722.pdf", 
+       height=100, width=110, device="pdf", limitsize = FALSE)
+```
+
+4. Generate the gene presence/absence data for nitrogen metabolism as a dedicated plot.
+```{r}
+heatmap_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 14),
+                 axis.text.y = element_text(color = "black", size = 14),
+                 axis.title.x = element_text(color = "black", size = 16, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 16, vjust = 6),
+                 legend.title=element_text(size=16), 
+                 legend.text=element_text(size=14),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(0, 0, 0, 0), "cm"))
+
+#recode the TRUE/FALSE data to presence absence
+Full_dereplicated_time_series_true_false_gathered<-Full_dereplicated_time_series_true_false_gathered %>% 
+                                           mutate(Presence_absence = as.factor(Presence_absence)) %>%
+                                           mutate(Presence_absence = recode(Presence_absence, 'TRUE' = "Present", 'FALSE' = "Absent"))
+
+Full_dereplicated_time_series_nitrogen_metabolism_1_percent_cutoff_heatmap<- Full_dereplicated_time_series_true_false_gathered %>%
+                                                    filter(Relative_abundance >= 1) %>% #add cutoff here
+                                                    filter(group == "Nitrogen metabolism") %>%
+                                                    ggplot(aes(x=Pathway_name, y = reorder(Family_genus_bin, Relative_abundance),
+                                                               fill=Presence_absence))+
+                                                    geom_tile(aes())+
+                                                    facet_grid(~ group, 
+                                                             scales = "free", space = "free") +
+                                                    theme(axis.text.x=element_text(angle=90, hjust=1)) +
+                                                    scale_fill_manual(values = c("#CCFFFF", "#009933"))+ 
+                                                    labs(title = "", x = "", y = "", fill = "Function") +
+                                                    heatmap_theme +
+                                                    theme(plot.title = element_text(hjust = 0.7, vjust = -1), 
+                                                          legend.position = "right", legend.direction = "vertical",
+                                                          legend.text = element_text(size = 62, face = "bold"),
+                                                          legend.title = element_text(size = 64, face = "bold"),
+                                                          legend.margin = margin(60, 60, 60, 60),
+                                                          legend.key.size = unit(4, 'cm'),
+                                                          strip.background = element_rect(colour = "grey"), 
+                                                          strip.text.y = element_blank(), 
+                                                          strip.text.x = element_text(color = "black", size = 64, face = "bold"),
+                                                          axis.text.x = element_markdown(size = 62, angle = 45, color = "black", face = "bold"),
+                                                          axis.text.y = element_blank(),
+                                                          axis.ticks.y = element_blank(),
+                                                          plot.margin=margin(0,0,0,0))
+
+Full_dereplicated_time_series_nitrogen_metabolism_1_percent_cutoff_heatmap
+
+
+ggsave("Fig4_nitrogen_metabolism_MAG_enrichment_cultures_time_series_1percent_heatmap_20250722.pdf", 
+       height=100, width=110, device="pdf", limitsize = FALSE)
+```
+
+5. Combine both plots to create the final figure.
+```{r}
+#Combine both figures
+Full_dereplicated_time_series_1_percent_cutoff_combined_plot <- Full_dereplicated_time_series_abundance_heatmap_1_percent_cutoff +
+                                                                Full_dereplicated_time_series_nitrogen_metabolism_1_percent_cutoff_heatmap +
+                                                                plot_layout(ncol = 2, nrow = 1, widths = c(1.4, 0.5), guides = "collect")
+
+Full_dereplicated_time_series_1_percent_cutoff_combined_plot
+ggsave("Fig4_one_percent_cutoff_relative_abundance_and_nitrogen_metabolism_for_MAG_enrichment_cultures_time_series_heatmap_20250722.pdf", 
+       height=85, width=110, device="pdf", limitsize = FALSE)
+
+ggsave("Fig4_one_percent_cutoff_relative_abundance_and_nitrogen_metabolism_for_MAG_enrichment_cultures_time_series_heatmap_20250722.jpg", 
+       dpi = 300, height=85, width=110, device="jpeg", limitsize = FALSE)
+```
+# Figure S5: % RNA mapped to different taxa from genome bin data
+
+1. Load in the .Rdata file that contains the ggplot2 objective that has been edited prior from an SQM object. See *Appendix I* for how the SQM object containing the genome bin data was prepared.
+```{r}
+load("FigS5_RNA_percent_nitrogen_cycling_gene_taxonomy_data.Rdata")
+```
+
+2. Plot a reformatted version of the bar graph to show the % RNA associated with nitrogen cycling genes that map to different taxa.
+```{r}
+barplot_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 28),
+                 axis.text.y = element_text(color = "black", size = 28),
+                 axis.title.x = element_text(color = "black", size = 32, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 32, vjust = 6),
+                 strip.text.x = element_text(color = "black", size = 30, face = "bold"),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=34),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 legend.key.size = unit (2, "cm"),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+Nitrogen_genes_RNA_genus_plot_percent_formatted <- Nitrogen_genes_RNA_genus_plot_percent + 
+                             facet_nested(~Metabolic_treatment_ordered + Time_point, scales = "free", space = "free") + 
+                             scale_x_discrete(labels = c("Nitrifying_Day0_rep1_RNA" = "1",
+                                                         "Nitrifying_Day0_rep2_RNA" = "2",
+                                                         "Nitrifying_Day0_rep3_RNA" = "3",
+                                                         "Nitrifying_Week4_Aerobic_rep1_RNA" = "1",
+                                                         "Nitrifying_Week4_Aerobic_rep2_RNA" = "2",
+                                                         "Nitrifying_Week4_Aerobic_rep3_RNA" = "3",
+                                                         "Nitrifying_Week4_Ironreduction_rep1_RNA" = "1",
+                                                         "Nitrifying_Week4_Ironreduction_rep2_RNA" = "2",
+                                                         "Nitrifying_Week4_Ironreduction_rep3_RNA" = "3",
+                                                         "Nitrifying_Week4_Nitratereduction_rep1_RNA" ="1",
+                                                         "Nitrifying_Week4_Nitratereduction_rep2_RNA" = "2",
+                                                         "Nitrifying_Week4_Sulphatereduction_rep1_RNA" = "1",
+                                                         "Nitrifying_Week4_Sulphatereduction_rep2_RNA" = "2",
+                                                         "Nitrifying_Week8_Aerobic_rep1_RNA" = "1",
+                                                         "Nitrifying_Week8_Aerobic_rep2_RNA" = "2",
+                                                         "Nitrifying_Week8_Aerobic_rep3_RNA" = "3",
+                                                         "Nitrifying_Week8_Ironreduction_rep3_RNA" = "3",
+                                                         "Nitrifying_Week8_Nitratereduction_rep1_RNA" = "1",
+                                                         "Nitrifying_Week8_Nitratereduction_rep2_RNA" = "2",
+                                                         "Nitrifying_Week8_Sulphatereduction_rep1_RNA" = "1",
+                                                         "Nitrifying_Week8_Sulphatereduction_rep2_RNA" = "2",
+                                                         "Nitrifying_Week8_Sulphatereduction_rep3_RNA" = "3")) + 
+                                                         theme(axis.text.x = element_text(angle = 0),
+                                                               strip.text.x = element_text(color = "black", size = 24, face = "bold")) +
+                                                         barplot_theme +
+                                                         labs(x = xlab("Replicate"), 
+                                                              y = ylab("RNA reads for nitrogen cycling genes mapped to taxa (%)"))
+
+Nitrogen_genes_RNA_genus_plot_percent_formatted
+ggsave("FigS5_Nitrogen_gene_RNA_mapping_to_genus_reformatted_stacked_barplot_20250722.pdf", height=20, width=46, device="pdf", limitsize = FALSE)
+ggsave("FigS5_Nitrogen_gene_RNA_mapping_to_genus_reformatted_stacked_barplot_20250722.jpg", dpi = 300, height=20, width=46, device="jpeg", limitsize = FALSE)
+```
+
+
+
+
+# Figure S6: Top 25 values for RNA reads mapped to amino acid metabolic pathways
+
+1. Load in the tab delimited file containing the 3 amino acid pathways within KEGG.
+```{r}
+Amino_acid_read_mapping_data <- fread("FigS6_RNA_read_mapping_for_amino_acid_metabolism_top25_hits_data.tsv", sep = "\t", header = "auto")
+```
+
+2. Create custom orders for facets and generate heat maps for RNA counts.
+```{r}
+#Generate theme and custom order for labels
+
+heatmap_theme<-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+                 panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                 axis.text.x = element_text(color = "black", size = 14),
+                 axis.text.y = element_text(color = "black", size = 14),
+                 axis.title.x = element_text(color = "black", size = 16, vjust = -3),
+                 axis.title.y = element_text(color = "black", size = 16, vjust = 6),
+                 legend.title=element_text(size=40, vjust = 2), 
+                 legend.text=element_text(size=38),
+                 legend.key = element_rect(fill = "white", color = NA),
+                 plot.title = element_text(size = 68, face = "bold", hjust = 0.5),
+                 panel.border = element_rect(colour = "black", fill=NA, size=1),
+                 plot.margin = unit(c(2, 2, 2, 2), "cm"))
+
+#Create custom order for the grouping variables
+Amino_acid_read_mapping_data$Time_point = factor(Amino_acid_read_mapping_data$Time_point, levels =c("Week 0", "Week 4", "Week 8"))
+                                                                        
+Amino_acid_read_mapping_data$Metabolic_treatment = factor(Amino_acid_read_mapping_data$Metabolic_treatment, 
+                                                          levels =c("Inoculum",
+                                                                   "Aerobic",
+                                                                   "Nitrate reduction",
+                                                                   "Iron reduction",
+                                                                   "Sulphate reduction"))
+
+Amino_acid_RNA_read_mapping_top_25 <-  Amino_acid_read_mapping_data %>%
+                                       filter(DNA_vs_RNA == "RNA") %>%
+                                       ggplot(aes(x= Replicate_number, y = reorder(kegg_ID, desc(TPM)), fill= TPM)) +
+                                       geom_tile(aes()) + 
+                                       facet_nested(~Metabolic_treatment + Time_point, 
+                                       scales = "fixed", space = "free", labeller = labeller(group = label_wrap_gen(10))) +
+                                       scale_y_discrete(limits = rev) +
+                                       theme(axis.text.x=element_text(angle=0, hjust=1),
+                                       axis.title.y = element_text(color = "black", size = 24, vjust = 0),
+                                       legend.key.size = unit(2, 'cm'))+
+                                       scale_fill_viridis_c(name="TPM") + #max for DNA is ~ 2000
+                                       labs(title = "",
+                                       x = "Replicate" , y = "KEGG ID") +
+                                       heatmap_theme +
+                                       theme(axis.text.x = element_text(color = "black", size = 60, face = "bold"),
+                                             axis.text.y = element_markdown(size = 60, face = "bold"),
+                                             axis.title.x = element_text(color = "black", size = 64, face = "bold"),
+                                             axis.title.y = element_text(color = "black", size = 64, vjust = 0, face = "bold"),
+                                             strip.text.x = element_text(color = "black", size = 64, face = "bold"),
+                                             legend.title=element_text(size=64, vjust = 2, face = "bold"), 
+                                             legend.text=element_text(size=62, face = "bold"))
+
+Amino_acid_RNA_read_mapping_top_25
+
+ggsave("FigS6_amino_acid_RNA_read_mapping_top_25_hits_heatmap_20250722.pdf", height=40, width=120, device="pdf", limitsize = FALSE)
+ggsave("FigS6_amino_acid_RNA_read_mapping_top_25_hits_heatmap_20250722.jpg", dpi = 300, height=40, width=120, device="jpeg", limitsize = FALSE)
+```
+# Appendix I: Preparing SQM directories for downstream data analyses
+
+## Preparing coassembly data for DNA and RNA read level NMDS ordinations
+
+1. Load the decompressed coassembly file.
+```{r}
+SqueezeCoassembly = loadSQM("SqueezeCoassemblyNF")
+```
+
+2. Create separate objects for the DNA and RNA read sets. Keep the boolean operator for remove_missing, which removes ORFs, contigs, bins, taxa, and most notably, functions, that are missing in this subset of samples to FALSE. This is going into a distance matrix, so if functions are missing, we want to capture that and preserve the signal on the front end. Omit the positive and negative controls when sub-setting these samples as well. Make sure to add the c() argument before providing the list of sample names in quotes to effectively capture the strings of text required.
+```{r}
+#DNA reads
+SqueezeCoassembly_DNA_read_data = subsetSamples(SqueezeCoassembly, c(
+                                                    "Nitrifying_Day0_rep1_DNA",
+                                                    "Nitrifying_Day0_rep2_DNA",
+                                                    "Nitrifying_Day0_rep3_DNA",
+                                                    "Nitrifying_Week4_Aerobic_rep1_DNA",
+                                                    "Nitrifying_Week4_Aerobic_rep2_DNA",
+                                                    "Nitrifying_Week4_Aerobic_rep3_DNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep1_DNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep2_DNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep3_DNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep1_DNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep2_DNA",
+                                                    #rep 3 is missing
+                                                    "Nitrifying_Week4_Sulphatereduction_rep1_DNA",
+                                                    "Nitrifying_Week4_Sulphatereduction_rep2_DNA",
+                                                    "Nitrifying_Week4_Sulphatereduction_rep3_DNA",
+                                                    "Nitrifying_Week8_Aerobic_rep1_DNA",
+                                                    "Nitrifying_Week8_Aerobic_rep2_DNA",
+                                                    "Nitrifying_Week8_Aerobic_rep3_DNA",
+                                                    "Nitrifying_Week8_Ironreduction_rep1_DNA",
+                                                    "Nitrifying_Week8_Ironreduction_rep2_DNA",
+                                                    "Nitrifying_Week8_Ironreduction_rep3_DNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep1_DNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep2_DNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep3_DNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep1_DNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep2_DNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep3_DNA"),
+                                                    remove_missing = FALSE)
+
+#RNA reads, samples that didn't provide RNA reads are commented out for reference to corresponding DNA reads
+SqueezeCoassembly_RNA_read_data = subsetSamples(SqueezeCoassembly, c(
+                                                    "Nitrifying_Day0_rep1_RNA",
+                                                    "Nitrifying_Day0_rep2_RNA",
+                                                    "Nitrifying_Day0_rep3_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep1_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep2_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep3_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep2_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep3_RNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep2_RNA",
+                                                    #rep 3 is missing
+                                                    "Nitrifying_Week4_Sulphatereduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Sulphatereduction_rep2_RNA",
+                                                    #"Nitrifying_Week4_Sulphatereduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep1_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep2_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep3_RNA",
+                                                    #"Nitrifying_Week8_Ironreduction_rep1_RNA",
+                                                    #"Nitrifying_Week8_Ironreduction_rep2_RNA",
+                                                    "Nitrifying_Week8_Ironreduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep1_RNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep2_RNA",
+                                                    #"Nitrifying_Week8_Nitratereduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep1_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep2_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep3_RNA"),
+                                                    remove_missing = FALSE)
+```
+
+3. Generate a dedicated metadata for the DNA and RNA data sets. These metadata files will be merged with distance matrices afterwards to add categorical data to the NMDS ordinations.
+```{r}
+SqueezeCoassembly_DNA_read_metadata <- as.data.frame(SqueezeCoassembly$misc$samples) %>%
+                     mutate(Time_point = case_when(
+                     grepl("Day0", SqueezeCoassembly$misc$samples) ~ "Week 0",
+                     grepl("Week4", SqueezeCoassembly$misc$samples) ~ "Week 4",
+                     grepl("Week8", SqueezeCoassembly$misc$samples) ~ "Week 8")) %>%
+                     # Add metabolic treatment variable
+                     mutate(Metabolic_treatment = case_when(
+                     grepl("Day0", SqueezeCoassembly$misc$samples) ~ "Inoculum",
+                     grepl("Aerobic", SqueezeCoassembly$misc$samples) ~ "Aerobic",
+                     grepl("Ironreduction", SqueezeCoassembly$misc$samples) ~ "Iron reduction",
+                     grepl("Nitratereduction",SqueezeCoassembly$misc$samples) ~ "Nitrate reduction",
+                     grepl("Sulphatereduction", SqueezeCoassembly$misc$samples) ~ 
+                          "Sulphate reduction")) %>%
+                     #Add replicate number variable
+                     mutate(Replicate_number = case_when(
+                     grepl("rep1", SqueezeCoassembly$misc$samples) ~ "1",
+                     grepl("rep2", SqueezeCoassembly$misc$samples) ~ "2",
+                     grepl("rep3", SqueezeCoassembly$misc$samples) ~ "3")) %>%
+                      
+                     #Add DNA vs RNA treatment
+                     mutate(DNA_vs_RNA = case_when(
+                     grepl("DNA", SqueezeCoassembly$misc$samples) ~ "DNA",
+                     grepl("RNA", SqueezeCoassembly$misc$samples) ~ "RNA")) %>%
+                    
+                     #Rename the original variable
+                     rename(Sample_ID = `SqueezeCoassembly$misc$samples`) %>%
+
+                     #Filter out positive and negative controls
+                     filter(!Sample_ID == "Nitrifying_NegativeDNA" &
+                            !Sample_ID == "Nitrifying_PositiveDNA" &
+                            !Sample_ID == "Nitrifying_NegativeRNA" &
+                            !Sample_ID == "Nitrifying_PositiveRNA") %>%
+                     
+                     #Filter data down to only include DNA samples
+                     filter(DNA_vs_RNA == "DNA")
+
+write.table(SqueezeCoassembly_DNA_read_metadata, file = "Fig3B_SqueezeCoassembly_DNA_read_metadata.tsv", sep = "\t", row.names = FALSE)
+
+SqueezeCoassembly_RNA_read_metadata <- as.data.frame(SqueezeCoassembly$misc$samples) %>%
+                     mutate(Time_point = case_when(
+                     grepl("Day0", SqueezeCoassembly$misc$samples) ~ "Week 0",
+                     grepl("Week4", SqueezeCoassembly$misc$samples) ~ "Week 4",
+                     grepl("Week8", SqueezeCoassembly$misc$samples) ~ "Week 8")) %>%
+                     # Add metabolic treatment variable
+                     mutate(Metabolic_treatment = case_when(
+                     grepl("Day0", SqueezeCoassembly$misc$samples) ~ "Inoculum",
+                     grepl("Aerobic", SqueezeCoassembly$misc$samples) ~ "Aerobic",
+                     grepl("Ironreduction", SqueezeCoassembly$misc$samples) ~ "Iron reduction",
+                     grepl("Nitratereduction",SqueezeCoassembly$misc$samples) ~ "Nitrate reduction",
+                     grepl("Sulphatereduction", SqueezeCoassembly$misc$samples) ~ 
+                          "Sulphate reduction")) %>%
+                     #Add replicate number variable
+                     mutate(Replicate_number = case_when(
+                     grepl("rep1", SqueezeCoassembly$misc$samples) ~ "1",
+                     grepl("rep2", SqueezeCoassembly$misc$samples) ~ "2",
+                     grepl("rep3", SqueezeCoassembly$misc$samples) ~ "3")) %>%
+                      
+                     #Add RNA vs RNA treatment
+                     mutate(RNA_vs_RNA = case_when(
+                     grepl("RNA", SqueezeCoassembly$misc$samples) ~ "RNA",
+                     grepl("RNA", SqueezeCoassembly$misc$samples) ~ "RNA")) %>%
+                    
+                     #Rename the original variable
+                     rename(Sample_ID = `SqueezeCoassembly$misc$samples`) %>%
+
+                     #Filter out positive and negative controls
+                     filter(!Sample_ID == "Nitrifying_NegativeRNA" &
+                            !Sample_ID == "Nitrifying_PositiveRNA" &
+                            !Sample_ID == "Nitrifying_NegativeRNA" &
+                            !Sample_ID == "Nitrifying_PositiveRNA") %>%
+                     
+                     #Filter data down to only include RNA samples
+                     filter(RNA_vs_RNA == "RNA")
+
+write.table(SqueezeCoassembly_RNA_read_metadata, file = "Fig3C_SqueezeCoassembly_RNA_read_metadata.tsv", sep = "\t", row.names = FALSE)
+```
+
+3. Finish generating the matrices and export them as .Rdata files to facilitate loading.
+```{r}
+rownames(SqueezeCoassembly_DNA_read_metadata) = colnames(SqueezeCoassembly_DNA_read_data$functions$KEGG$tpm)
+SqueezeCoassembly_DNA_KEGG_tpm_tranposed = t(SqueezeCoassembly_DNA_read_data$functions$KEGG$tpm) #this automatically convert it to a matrix
+
+#Write the R file to preserve matrix integrity in the source data
+save(SqueezeCoassembly_DNA_KEGG_tpm_tranposed, file = "Fig3B_DNA_reads_NMDS_ordination.RData")
+
+rownames(SqueezeCoassembly_RNA_read_metadata) = colnames(SqueezeCoassembly_RNA_read_data$functions$KEGG$tpm)
+SqueezeCoassembly_RNA_KEGG_tpm_tranposed = t(SqueezeCoassembly_RNA_read_data$functions$KEGG$tpm) #this automatically convert it to a matrix
+
+#Write the R file to preserve the matrix integrity in the source data
+save(SqueezeCoassembly_RNA_KEGG_tpm_tranposed, file = "Fig3C_RNA_reads_NMDS_ordination.RData")
+```
+
+## Preparing RNA read data sets and subsetting to functional genes of interest
+
+1. Subset the functions of interest in the entire DNA and RNA read data set, then subset the RNA samples of interest. Generate an initial figure which will serve as a ggplot object that gets edited directly (editing the dataframe while preserving the subsetting is not possible).
+```{r}
+#Reload the coassembly file
+SqueezeCoassembly = loadSQM("SqueezeCoassemblyNF")
+
+All_nitrogen_gene_reads_coassembly = subsetFun(SqueezeCoassembly,fun = 'K10944|K10945|K10946|K15864|K10535|K00370|K00371|K00372|K02567|K02568|K00368|K03385|K15876|K04561|K00376|K00362|K00363|K00374|K10534|K00360|K17877|K00366|K26138|K26138|K00361|K02305|K02591|K02588|K00531|K22896|K22897|K22898|K22899|K20932|K20933|K20934|K20935', fixed = F)
+
+Nitrogen_gene_RNA_read_subset_from_coassembly_data <- subsetSamples(All_nitrogen_gene_reads_coassembly, c(
+                                                    "Nitrifying_Day0_rep1_RNA",
+                                                    "Nitrifying_Day0_rep2_RNA",
+                                                    "Nitrifying_Day0_rep3_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep1_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep2_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep3_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep2_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep3_RNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep2_RNA",
+                                                    #rep 3 is missing
+                                                    "Nitrifying_Week4_Sulphatereduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Sulphatereduction_rep2_RNA",
+                                                    #"Nitrifying_Week4_Sulphatereduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep1_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep2_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep3_RNA",
+                                                    #"Nitrifying_Week8_Ironreduction_rep1_RNA",
+                                                    #"Nitrifying_Week8_Ironreduction_rep2_RNA",
+                                                    "Nitrifying_Week8_Ironreduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep1_RNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep2_RNA",
+                                                    #"Nitrifying_Week8_Nitratereduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep1_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep2_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep3_RNA"),
+                                                    remove_missing = FALSE)
+
+Nitrogen_gene_RNA_read_subset_from_coassembly_data_no_week0 <-subsetSamples(All_nitrogen_gene_reads_coassembly, c(
+                                                        "Nitrifying_Week4_Aerobic_rep1_RNA",
+                                                        "Nitrifying_Week4_Aerobic_rep2_RNA",
+                                                        "Nitrifying_Week4_Aerobic_rep3_RNA",
+                                                        "Nitrifying_Week4_Ironreduction_rep1_RNA",
+                                                        "Nitrifying_Week4_Ironreduction_rep2_RNA",
+                                                        "Nitrifying_Week4_Ironreduction_rep3_RNA",
+                                                        "Nitrifying_Week4_Nitratereduction_rep1_RNA",
+                                                        "Nitrifying_Week4_Nitratereduction_rep2_RNA",
+                                                        #rep 3 is missing
+                                                        "Nitrifying_Week4_Sulphatereduction_rep1_RNA",
+                                                        "Nitrifying_Week4_Sulphatereduction_rep2_RNA",
+                                                        #"Nitrifying_Week4_Sulphatereduction_rep3_RNA",
+                                                        "Nitrifying_Week8_Aerobic_rep1_RNA",
+                                                        "Nitrifying_Week8_Aerobic_rep2_RNA",
+                                                        "Nitrifying_Week8_Aerobic_rep3_RNA",
+                                                        #"Nitrifying_Week8_Ironreduction_rep1_RNA",
+                                                        #"Nitrifying_Week8_Ironreduction_rep2_RNA",
+                                                        "Nitrifying_Week8_Ironreduction_rep3_RNA",
+                                                        "Nitrifying_Week8_Nitratereduction_rep1_RNA",
+                                                        "Nitrifying_Week8_Nitratereduction_rep2_RNA",
+                                                        #"Nitrifying_Week8_Nitratereduction_rep3_RNA",
+                                                        "Nitrifying_Week8_Sulphatereduction_rep1_RNA",
+                                                        "Nitrifying_Week8_Sulphatereduction_rep2_RNA",
+                                                        "Nitrifying_Week8_Sulphatereduction_rep3_RNA"),
+                                                        remove_missing = FALSE)
+
+#Generate base plot for the %
+Nitrogen_genes_RNA_functions <- plotFunctions(Nitrogen_gene_RNA_read_subset_from_coassembly_data, fun_level = "KEGG", count = "percent")
+Nitrogen_genes_RNA_functions
+
+#Recreate plot in tpm
+Nitrogen_genes_RNA_functions_coassembly_tpm <- plotFunctions(Nitrogen_gene_RNA_read_subset_from_coassembly_data, fun_level = "KEGG", count = "tpm")
+Nitrogen_genes_RNA_functions_coassembly_tpm
+
+#Create plots without week 0 data
+Nitrogen_genes_RNA_functions_no_week0_coassembly <- plotFunctions(Nitrogen_gene_RNA_read_subset_from_coassembly_data_no_week0, fun_level = "KEGG", count = "percent")
+Nitrogen_genes_RNA_functions_no_week0_coassembly
+
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm <- plotFunctions(Nitrogen_gene_RNA_read_subset_from_coassembly_data_no_week0, fun_level = "KEGG", count = "tpm")
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm
+```
+2. Edit the full data set reported in percentage using the ggplot object directly. Once it is edited, export it as .Rdata so it can easily be loaded in the main body of the codebook.
+```{r}
+Nitrogen_genes_RNA_functions$data <- Nitrogen_genes_RNA_functions$data %>%
+                                     mutate(Time_point = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions$data$sample) ~ "Week 0",
+                                     grepl("Week4", Nitrogen_genes_RNA_functions$data$sample) ~ "Week 4",
+                                     grepl("Week8", Nitrogen_genes_RNA_functions$data$sample) ~ "Week 8")) %>%
+                                     # Add metabolic treatment variable
+                                     mutate(Metabolic_treatment = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions$data$sample) ~ "Inoculum",
+                                     grepl("Aerobic", Nitrogen_genes_RNA_functions$data$sample) ~ "Aerobic",
+                                     grepl("Ironreduction", Nitrogen_genes_RNA_functions$data$sample) ~ "Iron reduction",
+                                     grepl("Nitratereduction",Nitrogen_genes_RNA_functions$data$sample) ~ "Nitrate reduction",
+                                     grepl("Sulphatereduction", Nitrogen_genes_RNA_functions$data$sample) ~ "Sulphate reduction")) %>%
+                                     #Add replicate number variable
+                                     mutate(Replicate_number = case_when(
+                                     grepl("rep1", Nitrogen_genes_RNA_functions$data$sample) ~ "1",
+                                     grepl("rep2", Nitrogen_genes_RNA_functions$data$sample) ~ "2",
+                                     grepl("rep3", Nitrogen_genes_RNA_functions$data$sample) ~ "3"))
+
+Nitrogen_genes_RNA_functions$data$Metabolic_treatment_ordered <- factor(Nitrogen_genes_RNA_functions$data$Metabolic_treatment, 
+                                                                 levels =c('Inoculum', 
+                                                                           'Aerobic', 
+                                                                           'Nitrate reduction', 
+                                                                           'Iron reduction', 
+                                                                           'Sulphate reduction'))
+
+#Tidy up labels with EC pathways
+Nitrogen_genes_RNA_functions$data$item <- gsub("\\[[^][]*]", "", Nitrogen_genes_RNA_functions$data$item)
+Nitrogen_genes_RNA_functions$data$item <- gsub("\\r", "", Nitrogen_genes_RNA_functions$data$item)
+Nitrogen_genes_RNA_functions$data$item <- gsub("\\n", "", Nitrogen_genes_RNA_functions$data$item)
+
+Nitrogen_genes_RNA_functions$data$item <- gsub("nitriteoxidoreductase", 
+                                               "nitrite oxidoreductase",
+                                               Nitrogen_genes_RNA_functions$data$item)
+Nitrogen_genes_RNA_functions$data$item <- gsub("nitrate reductase / nitrite oxidoreductase", 
+                                               "nitrate reductase/nitrite oxidoreductase",
+                                                Nitrogen_genes_RNA_functions$data$item)
+Nitrogen_genes_RNA_functions$data$item <- gsub("K15876; cytochrome c nitrite reductase smallsubunit", 
+                                               "K15876; cytochrome c nitrite reductase small subunit",
+                                                Nitrogen_genes_RNA_functions$data$item)
+Nitrogen_genes_RNA_functions$data$item <- gsub("K00370; nitrate reductase / nitrite oxidoreductase, alpha subunit",
+                                               "K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit",
+                                                Nitrogen_genes_RNA_functions$data$item)
+Nitrogen_genes_RNA_functions$data$item <- gsub(" /hydroxylamine reductase", 
+                                               "/hydroxylamine reductase",
+                                                Nitrogen_genes_RNA_functions$data$item)
+Nitrogen_genes_RNA_functions$data$item <- gsub("catalyticsubunit", 
+                                               "catalytic subunit",
+                                               Nitrogen_genes_RNA_functions$data$item)
+
+Nitrogen_genes_RNA_functions$data$item <- trimws(Nitrogen_genes_RNA_functions$data$item, "r")
+
+save(Nitrogen_genes_RNA_functions, file = "FigS3A_Nitrogen_genes_RNA_functions_percent.RData")
+```
+
+3. Edit the full data set reported in tpm using the ggplot object directly. Once it is edited, export it as .Rdata so it can easily be loaded in the main body of the codebook.
+```{r}
+Nitrogen_genes_RNA_functions_coassembly_tpm$data <- Nitrogen_genes_RNA_functions_coassembly_tpm$data %>%
+                                     mutate(Time_point = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Week 0",
+                                     grepl("Week4", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Week 4",
+                                     grepl("Week8", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Week 8")) %>%
+                                     # Add metabolic treatment variable
+                                     mutate(Metabolic_treatment = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Inoculum",
+                                     grepl("Aerobic", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Aerobic",
+                                     grepl("Ironreduction", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Iron reduction",
+                                     grepl("Nitratereduction",Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Nitrate reduction",
+                                     grepl("Sulphatereduction", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "Sulphate reduction")) %>%
+                                     #Add replicate number variable
+                                     mutate(Replicate_number = case_when(
+                                     grepl("rep1", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "1",
+                                     grepl("rep2", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "2",
+                                     grepl("rep3", Nitrogen_genes_RNA_functions_coassembly_tpm$data$sample) ~ "3"))
+
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$Metabolic_treatment_ordered <- factor(Nitrogen_genes_RNA_functions_coassembly_tpm$data$Metabolic_treatment, 
+                                                                 levels =c('Inoculum', 
+                                                                           'Aerobic', 
+                                                                           'Nitrate reduction', 
+                                                                           'Iron reduction', 
+                                                                           'Sulphate reduction'))
+
+#Tidy up labels with EC pathways
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("\\[[^][]*]", "", Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("\\r", "", Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("\\n", "", Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("nitriteoxidoreductase", 
+                                               "nitrite oxidoreductase",
+                                               Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("nitrate reductase / nitrite oxidoreductase", 
+                                               "nitrate reductase/nitrite oxidoreductase",
+                                                Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("K15876; cytochrome c nitrite reductase smallsubunit", 
+                                               "K15876; cytochrome c nitrite reductase small subunit",
+                                                Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("K00370; nitrate reductase / nitrite oxidoreductase, alpha subunit",
+                                               "K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit",
+                                                Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub(" /hydroxylamine reductase", 
+                                               "/hydroxylamine reductase",
+                                                Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- gsub("catalyticsubunit", 
+                                               "catalytic subunit",
+                                               Nitrogen_genes_RNA_functions_coassembly_tpm$data$item)
+
+Nitrogen_genes_RNA_functions_coassembly_tpm$data$item <- trimws(Nitrogen_genes_RNA_functions_coassembly_tpm$data$item, "r")
+
+save(Nitrogen_genes_RNA_functions_coassembly_tpm, file = "FigS3B_Nitrogen_genes_RNA_functions_tpm.RData")
+```
+
+4. Edit the full data set omitting week 0 in percentage using the ggplot object directly. Once it is edited, export it as .Rdata so it can easily be loaded in the main body of the codebook.
+
+```{r}
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data <- Nitrogen_genes_RNA_functions_no_week0_coassembly$data %>%
+                                     mutate(Time_point = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Week 0",
+                                     grepl("Week4", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Week 4",
+                                     grepl("Week8", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Week 8")) %>%
+                                     # Add metabolic treatment variable
+                                     mutate(Metabolic_treatment = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Inoculum",
+                                     grepl("Aerobic", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Aerobic",
+                                     grepl("Ironreduction", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Iron reduction",
+                                     grepl("Nitratereduction",Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Nitrate reduction",
+                                     grepl("Sulphatereduction", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "Sulphate reduction")) %>%
+                                     #Add replicate number variable
+                                     mutate(Replicate_number = case_when(
+                                     grepl("rep1", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "1",
+                                     grepl("rep2", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "2",
+                                     grepl("rep3", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$sample) ~ "3"))
+
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$Metabolic_treatment_ordered <- factor(Nitrogen_genes_RNA_functions_no_week0_coassembly$data$Metabolic_treatment, 
+                                                                 levels =c('Inoculum', 
+                                                                           'Aerobic', 
+                                                                           'Nitrate reduction', 
+                                                                           'Iron reduction', 
+                                                                           'Sulphate reduction'))
+
+#Tidy up labels with EC pathways
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("\\[[^][]*]", "", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("\\r", "", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("\\n", "", Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("nitriteoxidoreductase", 
+                                               "nitrite oxidoreductase",
+                                               Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("nitrate reductase / nitrite oxidoreductase", 
+                                               "nitrate reductase/nitrite oxidoreductase",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("K15876; cytochrome c nitrite reductase smallsubunit", 
+                                               "K15876; cytochrome c nitrite reductase small subunit",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("K00370; nitrate reductase / nitrite oxidoreductase, alpha subunit",
+                                               "K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub(" /hydroxylamine reductase", 
+                                               "/hydroxylamine reductase",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- gsub("catalyticsubunit", 
+                                               "catalytic subunit",
+                                               Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item)
+
+Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item <- trimws(Nitrogen_genes_RNA_functions_no_week0_coassembly$data$item, "r")
+
+save(Nitrogen_genes_RNA_functions_no_week0_coassembly, file = "FigS3C_Nitrogen_genes_RNA_functions_no_week0_percent.RData")
+```
+
+5. Edit the full data set omitting week 0 in tpm using the ggplot object directly. Once it is edited, export it as .Rdata so it can easily be loaded in the main body of the codebook.
+```{r}
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data <- Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data %>%
+                                     mutate(Time_point = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Week 0",
+                                     grepl("Week4", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Week 4",
+                                     grepl("Week8", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Week 8")) %>%
+                                     # Add metabolic treatment variable
+                                     mutate(Metabolic_treatment = case_when(
+                                     grepl("Day0", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Inoculum",
+                                     grepl("Aerobic", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Aerobic",
+                                     grepl("Ironreduction", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Iron reduction",
+                                     grepl("Nitratereduction",Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Nitrate reduction",
+                                     grepl("Sulphatereduction", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "Sulphate reduction")) %>%
+                                     #Add replicate number variable
+                                     mutate(Replicate_number = case_when(
+                                     grepl("rep1", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "1",
+                                     grepl("rep2", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "2",
+                                     grepl("rep3", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$sample) ~ "3"))
+
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$Metabolic_treatment_ordered <- factor(Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$Metabolic_treatment, 
+                                                                 levels =c('Inoculum', 
+                                                                           'Aerobic', 
+                                                                           'Nitrate reduction', 
+                                                                           'Iron reduction', 
+                                                                           'Sulphate reduction'))
+
+#Tidy up labels with EC pathways
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("\\[[^][]*]", "", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("\\r", "", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("\\n", "", Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("nitriteoxidoreductase", 
+                                               "nitrite oxidoreductase",
+                                               Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("nitrate reductase / nitrite oxidoreductase", 
+                                               "nitrate reductase/nitrite oxidoreductase",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("K15876; cytochrome c nitrite reductase smallsubunit", 
+                                               "K15876; cytochrome c nitrite reductase small subunit",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("K00370; nitrate reductase / nitrite oxidoreductase, alpha subunit",
+                                               "K00370; nitrate reductase/nitrite oxidoreductase, alpha subunit",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub(" /hydroxylamine reductase", 
+                                               "/hydroxylamine reductase",
+                                                Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- gsub("catalyticsubunit", 
+                                               "catalytic subunit",
+                                               Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item)
+
+Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item <- trimws(Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm$data$item, "r")
+
+save(Nitrogen_genes_RNA_functions_no_week0_coassembly_tpm, file = "FigS3D_Nitrogen_genes_RNA_functions_no_week0_tpm.RData")
+```
+
+## Preparing the bins for downstream analyses
+
+1. Reload SQM object and subset the RNA data.
+```{r}
+SqueezeExtBins = loadSQM("SqueezeExtBins")
+SqueezeExtBins_RNA_read_data = subsetSamples(SqueezeExtBins, c(
+                                            "Nitrifying_Day0_rep1_RNA",
+                                            "Nitrifying_Day0_rep2_RNA",
+                                            "Nitrifying_Day0_rep3_RNA",
+                                            "Nitrifying_Week4_Aerobic_rep1_RNA",
+                                            "Nitrifying_Week4_Aerobic_rep2_RNA",
+                                            "Nitrifying_Week4_Aerobic_rep3_RNA",
+                                            "Nitrifying_Week4_Ironreduction_rep1_RNA",
+                                            "Nitrifying_Week4_Ironreduction_rep2_RNA",
+                                            "Nitrifying_Week4_Ironreduction_rep3_RNA",
+                                            "Nitrifying_Week4_Nitratereduction_rep1_RNA",
+                                            "Nitrifying_Week4_Nitratereduction_rep2_RNA",
+                                            #rep 3 is missing
+                                            "Nitrifying_Week4_Sulphatereduction_rep1_RNA",
+                                            "Nitrifying_Week4_Sulphatereduction_rep2_RNA",
+                                            #"Nitrifying_Week4_Sulphatereduction_rep3_RNA",
+                                            "Nitrifying_Week8_Aerobic_rep1_RNA",
+                                            "Nitrifying_Week8_Aerobic_rep2_RNA",
+                                            "Nitrifying_Week8_Aerobic_rep3_RNA",
+                                            #"Nitrifying_Week8_Ironreduction_rep1_RNA",
+                                            #"Nitrifying_Week8_Ironreduction_rep2_RNA",
+                                            "Nitrifying_Week8_Ironreduction_rep3_RNA",
+                                            "Nitrifying_Week8_Nitratereduction_rep1_RNA",
+                                            "Nitrifying_Week8_Nitratereduction_rep2_RNA",
+                                            #"Nitrifying_Week8_Nitratereduction_rep3_RNA",
+                                            "Nitrifying_Week8_Sulphatereduction_rep1_RNA",
+                                            "Nitrifying_Week8_Sulphatereduction_rep2_RNA",
+                                            "Nitrifying_Week8_Sulphatereduction_rep3_RNA"),
+                                            remove_missing = FALSE)
+```
+2. Plot the bin level mapping to get a sense of the % unmapped. Apply a bit of custom formatting to improve presentation.
+```{r}
+RNA_bin_plot <- plotBins(SqueezeExtBins_RNA_read_data, count = "percent")
+RNA_bin_plot
+
+RNA_bin_plot$data <- RNA_bin_plot$data %>%
+                     mutate(Time_point = case_when(
+                     grepl("Day0", RNA_bin_plot$data$sample) ~ "Week 0",
+                     grepl("Week4", RNA_bin_plot$data$sample) ~ "Week 4",
+                     grepl("Week8", RNA_bin_plot$data$sample) ~ "Week 8")) %>%
+                     # Add metabolic treatment variable
+                     mutate(Metabolic_treatment = case_when(
+                     grepl("Day0", RNA_bin_plot$data$sample) ~ "Inoculum",
+                     grepl("Aerobic", RNA_bin_plot$data$sample) ~ "Aerobic",
+                     grepl("Ironreduction", RNA_bin_plot$data$sample) ~ "Iron reduction",
+                     grepl("Nitratereduction",RNA_bin_plot$data$sample) ~ "Nitrate reduction",
+                     grepl("Sulphatereduction", RNA_bin_plot$data$sample) ~ "Sulphate reduction")) %>%
+                     #Add replicate number variable
+                     mutate(Replicate_number = case_when(
+                     grepl("rep1", RNA_bin_plot$data$sample) ~ "1",
+                     grepl("rep2", RNA_bin_plot$data$sample) ~ "2",
+                     grepl("rep3", RNA_bin_plot$data$sample) ~ "3"))
+
+RNA_bin_plot$data$Metabolic_treatment_ordered <- factor(RNA_bin_plot$data$Metabolic_treatment, 
+                                                 levels =c('Inoculum', 
+                                                           'Aerobic', 
+                                                           'Nitrate reduction', 
+                                                           'Iron reduction', 
+                                                           'Sulphate reduction'))
+print(RNA_bin_plot)
+
+save(RNA_bin_plot, file = "FigS4_RNA_percent_bin_data.RData")
+```
+
+3. Generate additional SQM objects that subset the nitrogen functional genes but using the bin data as the input.
+```{r}
+All_nitrogen_gene_reads_bins = subsetFun(SqueezeExtBins,fun = 'K10944|K10945|K10946|K15864|K10535|K00370|K00371|K00372|K02567|K02568|K00368|K03385|K15876|K04561|K00376|K00362|K00363|K00374|K10534|K00360|K17877|K00366|K26138|K26138|K00361|K02305|K02591|K02588|K00531|K22896|K22897|K22898|K22899|K20932|K20933|K20934|K20935', fixed = F)
+
+Nitrogen_gene_RNA_read_subset_from_bin_data <- subsetSamples(All_nitrogen_gene_reads_bins, c(
+                                                    "Nitrifying_Day0_rep1_RNA",
+                                                    "Nitrifying_Day0_rep2_RNA",
+                                                    "Nitrifying_Day0_rep3_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep1_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep2_RNA",
+                                                    "Nitrifying_Week4_Aerobic_rep3_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep2_RNA",
+                                                    "Nitrifying_Week4_Ironreduction_rep3_RNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Nitratereduction_rep2_RNA",
+                                                    #rep 3 is missing
+                                                    "Nitrifying_Week4_Sulphatereduction_rep1_RNA",
+                                                    "Nitrifying_Week4_Sulphatereduction_rep2_RNA",
+                                                    #"Nitrifying_Week4_Sulphatereduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep1_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep2_RNA",
+                                                    "Nitrifying_Week8_Aerobic_rep3_RNA",
+                                                    #"Nitrifying_Week8_Ironreduction_rep1_RNA",
+                                                    #"Nitrifying_Week8_Ironreduction_rep2_RNA",
+                                                    "Nitrifying_Week8_Ironreduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep1_RNA",
+                                                    "Nitrifying_Week8_Nitratereduction_rep2_RNA",
+                                                    #"Nitrifying_Week8_Nitratereduction_rep3_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep1_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep2_RNA",
+                                                    "Nitrifying_Week8_Sulphatereduction_rep3_RNA"),
+                                                    remove_missing = FALSE)
+
+Nitrogen_genes_RNA_genus_plot_percent <- plotTaxonomy(Nitrogen_gene_RNA_read_subset_from_bin_data, rank = "genus", count = "percent")
+Nitrogen_genes_RNA_genus_plot_percent
+
+Nitrogen_genes_RNA_genus_plot_percent$data <- Nitrogen_genes_RNA_genus_plot_percent$data %>%
+                        mutate(Time_point = case_when(
+                        grepl("Day0", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "Week 0",
+                        grepl("Week4", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "Week 4",
+                        grepl("Week8", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "Week 8")) %>%
+                        # Add metabolic treatment variable
+                        mutate(Metabolic_treatment = case_when(
+                        grepl("Day0", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "Inoculum",
+                        grepl("Aerobic", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "Aerobic",
+                        grepl("Ironreduction", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "Iron reduction",
+                        grepl("Nitratereduction",Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "Nitrate reduction",
+                        grepl("Sulphatereduction", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ 
+                             "Sulphate reduction")) %>%
+                        #Add replicate number variable
+                        mutate(Replicate_number = case_when(
+                        grepl("rep1", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "1",
+                        grepl("rep2", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "2",
+                        grepl("rep3", Nitrogen_genes_RNA_genus_plot_percent$data$sample) ~ "3"))
+
+Nitrogen_genes_RNA_genus_plot_percent$data$Metabolic_treatment_ordered <- factor(Nitrogen_genes_RNA_genus_plot_percent$data$Metabolic_treatment, 
+                                                    levels =c('Inoculum', 
+                                                              'Aerobic', 
+                                                              'Nitrate reduction', 
+                                                              'Iron reduction', 
+                                                              'Sulphate reduction'))
+print(Nitrogen_genes_RNA_genus_plot_percent)
+save(Nitrogen_genes_RNA_genus_plot_percent, file = "FigS5_RNA_percent_nitrogen_cycling_gene_taxonomy_data.RData")
+```
